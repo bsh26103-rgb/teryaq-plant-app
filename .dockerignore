@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.git
+.gitignore
+
+# Local-only diagnostic scripts — not needed at runtime.
+check_checkpoint.py
+diff_centroids.py
+
+# Start the public demo with a clean slate instead of shipping your
+# local test history. The app recreates this file automatically on
+# the first prediction either way.
+prediction_log.csv
+
+# Not used inside the container itself (only read by Hugging Face on
+# the repo page) — harmless either way, excluded just to keep the
+# build context minimal.
+README.md

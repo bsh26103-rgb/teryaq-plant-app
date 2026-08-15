@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>النباتات — Scan·25</title>
+<link rel="manifest" href="/static/manifest.json">
+<link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
+<link rel="icon" href="/static/icons/favicon-32.png">
+<meta name="theme-color" content="#1B4332">
+<link rel="stylesheet" href="/static/app.css">
+<script>document.documentElement.setAttribute("data-theme", localStorage.getItem("plantai_theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));</script>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="/">
+    <span class="brand-mark"></span>
+    <span class="brand-name">Scan·25</span>
+  </a>
+  <div class="topbar-right">
+    <div class="lang-pill-row">
+      <button class="lang-pill" id="langEnBtn" onclick="setLang('en')">EN</button>
+      <button class="lang-pill" id="langArBtn" onclick="setLang('ar')">AR</button>
+    </div>
+    <span class="topbar-tag">25 نوع نباتي</span>
+    <button class="theme-toggle" id="themeToggle" aria-label="تبديل المظهر"></button>
+  </div>
+</header>
+
+<div class="wrap">
+  <h1 style="font-size:22px" data-i18n="plantsListTitle">دليل النباتات</h1>
+  <p class="sub" data-i18n="plantsListHint">كل الأصناف الـ25 يلي مدرّب عليهم النظام.</p>
+
+  <div class="plant-grid">
+    {% for cname in class_names %}
+      {% set p = plants_db.get(cname) %}
+      <a class="plant-card" href="/plant/{{ cname }}">
+        <div class="pc-name">
+          {% if p and p.poisonous %}<span class="pc-dot" style="background:var(--danger)"></span>
+          {% elif p and p.medicinal %}<span class="pc-dot" style="background:var(--safe)"></span>
+          {% endif %}
+          {{ (p.english_name if p else cname) }}
+        </div>
+        {% if p and p.scientific_name %}<div class="pc-sci">{{ p.scientific_name }}</div>{% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+<button class="fab" id="chatFab" onclick="window.location.href='/#chatbot'" aria-label="المساعد الذكي">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5h14v9H8l-3 3v-3H3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+</button>
+
+<nav class="tabbar">
+  <a href="/">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 9l7-6 7 6v8a1 1 0 0 1-1 1h-3v-6H7v6H4a1 1 0 0 1-1-1V9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <span data-i18n="navHome">الرئيسية</span>
+  </a>
+  <a href="/plants-list" class="active">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 17V9M10 9C10 5.5 7 4 4 4c0 3.5 2 6 6 5zM10 9c0-3.5 3-5 6-5 0 3.5-2 6-6 5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <span data-i18n="navPlants">النباتات</span>
+  </a>
+  <a href="/history">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <span data-i18n="navHistory">السجل</span>
+  </a>
+</nav>
+
+<script src="/static/js/i18n.js"></script>
+<script src="/static/app.js"></script>
+<script>
+initTheme();
+wireThemeToggle("themeToggle");
+applyLang(currentLang);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>السجل — Scan·25</title>
+<link rel="manifest" href="/static/manifest.json">
+<link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
+<link rel="icon" href="/static/icons/favicon-32.png">
+<meta name="theme-color" content="#1B4332">
+<link rel="stylesheet" href="/static/app.css">
+<script>document.documentElement.setAttribute("data-theme", localStorage.getItem("plantai_theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));</script>
+<style>
+.team {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-align: right;
+}
+.team h2, .team h3 {
+  color: #1B4332;
+  margin-bottom: 14px;
+}
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.team-card {
+  flex: 1 1 calc(50% - 12px);
+  padding: 14px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+.team-card:nth-child(1) { background: #1B4332; }
+.team-card:nth-child(2) { background: #2D6A4F; }
+.team-card:nth-child(3) { background: #40916C; }
+.team-card:nth-child(4) { background: #52B788; }
+.supervisor {
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #74C69D;
+  color: #fff;
+  font-weight: 600;
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="/">
+    <span class="brand-mark"></span>
+    <span class="brand-name">Scan·25</span>
+  </a>
+  <div class="topbar-right">
+    <div class="lang-pill-row">
+      <button class="lang-pill" id="langEnBtn" onclick="setLang('en')">EN</button>
+      <button class="lang-pill" id="langArBtn" onclick="setLang('ar')">AR</button>
+    </div>
+    <span class="topbar-tag" data-i18n="historyTitle">آخر الفحوصات</span>
+    <button class="theme-toggle" id="themeToggle" aria-label="تبديل المظهر"></button>
+  </div>
+</header>
+
+<div class="wrap">
+  <h1 style="font-size:22px" data-i18n="historyTitle">سجل الفحوصات</h1>
+  <p class="sub" data-i18n="historyHint">آخر 20 عملية فحص على هاد الجهاز. البيانات محفوظة محليًا بالمتصفح فقط.</p>
+
+  <div id="list"></div>
+
+  <div class="empty" id="emptyState" style="display:none">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><path d="M20 12v8l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <p data-i18n="historyEmptyText">لا توجد فحوصات محفوظة بعد.</p>
+    <a class="btn btn-primary" href="/" style="max-width:220px;margin:14px auto 0" data-i18n="scanFirstImage">فحص أول صورة</a>
+  </div>
+
+  <button class="btn btn-outline" id="clearBtn" style="margin-top:18px;display:none" data-i18n="clearHistory">امسحي السجل</button>
+
+  <!-- قسم الفريق -->
+  <section class="team">
+    <h2 data-i18n="teamTitle">فريق العمل</h2>
+    <div class="team-list">
+      <div class="team-card">
+        <span class="ar-only">براءه خالد — تخصص الذكاء الاصطناعي</span>
+        <span class="en-only">Baraah Khalid — Artificial Intelligence</span>
+      </div>
+      <div class="team-card">
+        <span class="ar-only">لمى الرواجفة — تخصص الذكاء الاصطناعي</span>
+        <span class="en-only">Lama Al-Rawajfeh — Artificial Intelligence</span>
+      </div>
+      <div class="team-card">
+        <span class="ar-only">شيماء العطيوي — تخصص الأمن السيبراني</span>
+        <span class="en-only">Shaimaa Al-Atiwi — Cybersecurity</span>
+      </div>
+      <div class="team-card">
+        <span class="ar-only">أجياد العمرو — تخصص الأمن السيبراني</span>
+        <span class="en-only">Ajyad Al-Amro — Cybersecurity</span>
+      </div>
+    </div>
+    <h3 data-i18n="supervisorTitle">المشرفة</h3>
+    <div class="supervisor">
+      <span class="ar-only">الدكتورة شروق العيدي — جامعة الطفيلة التقنية</span>
+      <span class="en-only">Dr. Shurouk Al-Eidi — Tafila Technical University</span>
+    </div>
+  </section>
+</div>
+
+<button class="fab" id="chatFab" onclick="window.location.href='/#chatbot'" aria-label="المساعد الذكي">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5h14v9H8l-3 3v-3H3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+</button>
+
+<nav class="tabbar">
+  <a href="/">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 9l7-6 7 6v8a1 1 0 0 1-1 1h-3v-6H7v6H4a1 1 0 0 1-1-1V9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <span data-i18n="navHome">الرئيسية</span>
+  </a>
+  <a href="/plants-list">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 17V9M10 9C10 5.5 7 4 4 4c0 3.5 2 6 6 5zM10 9c0-3.5 3-5 6-5 0 3.5-2 6-6 5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <span data-i18n="navPlants">النباتات</span>
+  </a>
+  <a href="/history" class="active">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <span data-i18n="navHistory">السجل</span>
+  </a>
+</nav>
+
+<script src="/static/js/i18n.js"></script>
+<script src="/static/app.js"></script>
+<script>
+initTheme();
+wireThemeToggle("themeToggle");
+applyLang(currentLang);
+
+const list = document.getElementById("list");
+const emptyState = document.getElementById("emptyState");
+const clearBtn = document.getElementById("clearBtn");
+const hist = getHistory();
+
+function timeAgo(ts) {
+  const s = Math.floor((Date.now() - ts) / 1000);
+  if (s < 60) return "الآن";
+  if (s < 3600) return Math.floor(s / 60) + " د";
+  if (s < 86400) return Math.floor(s / 3600) + " س";
+  return Math.floor(s / 86400) + " يوم";
+}
+
+function renderHist() {
+  list.innerHTML = "";
+  if (!hist.length) {
+    emptyState.style.display = "block";
+    clearBtn.style.display = "none";
+    return;
+  }
+  emptyState.style.display = "none";
+  clearBtn.style.display = "block";
+  hist.forEach((data) => {
+    const info = data.info || {};
+    const v = verdictOf(data);
+    const name = data.status === "ok" ? ((currentLang === "ar" ? info.arabic_name : info.english_name) || info.english_name || data.prediction) : t("statusUnknown");
+    const row = document.createElement("a");
+    row.className = "hist-row";
+    row.href = "javascript:void(0)";
+    row.innerHTML = `
+      <img class="hist-thumb" src="${data.image || ""}">
+      <div>
+        <div class="hist-name">${name}</div>
+        <div class="hist-meta">${data.confidence}% · ${timeAgo(data.timestamp)}</div>
+      </div>
+      <span class="hist-dot ${v.cls}"></span>
+    `;
+    row.addEventListener("click", () => {
+      sessionStorage.setItem(LAST_RESULT_KEY, JSON.stringify(data));
+      window.location.href = "/result";
+    });
+    list.appendChild(row);
+  });
+}
+renderHist();
+
+window.onLangChange = () => { renderHist(); };
+
+clearBtn.addEventListener("click", () => {
+  if (confirm("هل أنتِ متأكدة من رغبتك في مسح السجلّ بالكامل؟")) {
+    clearHistory();
+    window.location.reload();
+  }
+});
+</script>
+
+</body>
+</html>

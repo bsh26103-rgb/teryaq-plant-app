@@ -1,0 +1,63 @@
+timestamp,filename,status,prediction,confidence,inference_time_ms
+2026-07-23T20:33:42,deadly.jpg,ok,deadly_nightshade,99.68,1708.82
+2026-07-23T20:33:54,deadly.jpg,ok,deadly_nightshade,99.68,768.4
+2026-07-23T20:34:06,الحنظل.jpg,ok,colocynth,99.56,771.23
+2026-07-23T21:28:05,الحنظل.jpg,ok,colocynth,99.56,1365.56
+2026-07-23T21:58:57,الحنظل.jpg,ok,colocynth,99.56,5217.81
+2026-07-23T22:12:54,sage.jpg,ok,sage,99.17,1208.67
+2026-07-23T22:13:46,deadly.jpg,ok,deadly_nightshade,99.68,781.33
+2026-07-23T22:36:09,rosmary.jpg,ok,rosemary,98.96,920.51
+2026-07-23T23:04:31,alovera.jpg,ok,aloevera,99.04,1052.55
+2026-07-23T23:12:23,deadly.jpg,ok,deadly_nightshade,99.68,854.47
+2026-07-24T01:21:14,الدفلى.jpeg,ok,oleander,99.04,3697.2
+2026-07-24T01:38:09,zanjabeel.jpg,ok,zanjabeel_ginger,99.66,1462.73
+2026-07-24T01:40:30,zatar.jpg,ok,Za'atar,96.2,1024.38
+2026-07-24T16:44:56,neem.jpg,ok,neem,97.16,2583.06
+2026-07-24T16:46:42,neem.jpg,ok,neem,97.16,1472.24
+2026-07-24T17:11:54,deadly.jpg,ok,deadly_nightshade,99.68,2525.87
+2026-07-24T17:34:39,devilbackbone.jpg,ok,devilbackbone,99.06,2286.76
+2026-07-24T17:35:23,devilbackbone.jpg,ok,devilbackbone,99.06,1849.03
+2026-07-25T04:13:28,mint.jpg,ok,Mint,98.59,2204.16
+2026-07-25T05:50:49,lemon.jpg,ok,Lemon,98.47,2151.72
+2026-07-25T22:21:55,mint.jpg,ok,Mint,98.59,1979.99
+2026-07-26T02:21:33,devilbackbone.jpg,ok,devilbackbone,99.06,4448.22
+2026-07-26T02:22:00,devilbackbone.jpg,ok,devilbackbone,99.06,1109.67
+2026-07-26T13:08:02,lemon.jpg,ok,Lemon,98.47,1750.36
+2026-07-26T22:46:15,tulsi.jpg,ok,tulsi,98.22,1742.38
+2026-07-26T22:53:29,tulsi.jpg,ok,tulsi,98.22,834.4
+2026-07-26T22:53:47,lemon.jpg,ok,Lemon,98.47,863.49
+2026-07-26T23:21:13,Screenshot 2026-07-25 185601.png,unknown,,29.06,7380.15
+2026-07-26T23:58:53,Screenshot 2026-06-25 004056.png,low_confidence,,35.17,2428.37
+2026-07-27T03:34:24,Screenshot 2026-07-02 023046.png,unknown,,33.47,3064.5
+2026-07-27T03:40:41,Screenshot 2026-06-26 193613.png,low_confidence,,36.9,1882.99
+2026-07-27T03:49:33,Screenshot 2026-07-01 220937.png,not_a_plant,,26.68,947.87
+2026-07-27T03:49:37,Screenshot 2026-07-01 220937.png,not_a_plant,,26.68,570.56
+2026-07-27T10:36:26,rosmary.jpg,ok,rosemary,98.96,4412.46
+2026-07-27T11:34:57,Screenshot 2026-07-27 111427.png,unknown,,26.38,8584.01
+2026-07-27T11:36:21,Screenshot 2026-07-01 215100.png,not_a_plant,,37.22,779.22
+2026-07-28T19:02:46,images.jfif,unknown,,32.25,2268.22
+2026-07-30T21:09:53,tulsi.jpg,ok,tulsi,98.22,3392.23
+2026-07-30T22:24:35,tulsi.jpg,ok,tulsi,98.22,6810.63
+2026-08-01T06:40:56,other_val_0005.jpeg,unknown,,91.07,2622.67
+2026-08-02T21:12:29,الحنظل.jpg,ok,colocynth,99.58,3891.27
+2026-08-02T21:12:46,الحنظل.jpg,ok,colocynth,99.58,1600.21
+2026-08-02T21:13:36,image (1).png,unknown,,88.47,1741.63
+2026-08-07T20:10:33,images.jpg,ok,Mint,96.1,1859.47
+2026-08-08T01:12:02,1.jpg,ok,sage,80.41,7699.31
+2026-08-08T01:21:16,Screenshot 2026-06-30 234917.png,ok,Mint,92.38,4240.87
+2026-08-08T01:27:45,alovera2.jpg,ok,aloevera,96.7,3679.85
+2026-08-08T01:28:28,ست الحسن (2).jpg,ok,deadly_nightshade,94.09,2156.03
+2026-08-08T13:05:30,بابونج (2).jpeg,ok,chamomile,92.92,14583.16
+2026-08-08T13:31:33,زنجبيل (2).jpg,ok,zanjabeel_ginger,90.78,7545.08
+2026-08-08T13:42:21,الحنظل1 (1).jpeg,ok,colocynth,83.81,4413.94
+2026-08-08T13:55:08,لافندر.jpg,ok,khuzama_lavender,88.62,7105.97
+2026-08-08T14:01:46,ليمون (1).jpg,not_a_plant,,70.56,4288.34
+2026-08-08T14:02:39,ليمون (2).jpg,ok,Lemon,90.74,1221.8
+2026-08-08T14:05:29,عصا الشيطان (2).jpg,ok,devilbackbone,96.47,1569.23
+2026-08-10T02:10:47,بابونج (1).jpeg,ok,chamomile,95.94,16445.87
+2026-08-11T04:14:53,زنجبيل (2).jpg,ok,zanjabeel_ginger,90.41,4297.29
+2026-08-11T04:16:10,otherV2_test_0003.jpeg,unknown,,10.83,996.16
+2026-08-11T04:36:13,centlla.jpg,ok,centella,97.43,2447.56
+2026-08-11T04:36:25,centlla.jpg,ok,centella,97.43,846.29
+2026-08-11T04:36:43,اكليل الجبل.jpg,ok,rosemary,96.21,791.8
+2026-08-11T15:28:21,زنجبيل (2).jpg,ok,zanjabeel_ginger,90.41,2052.65

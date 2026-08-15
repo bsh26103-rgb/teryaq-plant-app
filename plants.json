@@ -1,0 +1,1836 @@
+{
+  "_readme": "Short, cautiously-worded summaries compiled from Kew POWO, PubMed/peer-reviewed reviews, ScienceDirect, NCCIH and MedlinePlus — not copied text. Kew links point to a search for the exact species (https://powo.science.kew.org/results?q=...) rather than a single taxon ID, since taxon IDs can silently point to a synonym instead of the accepted name. 'phyllanthus' was corrected in this version — the source dataset (BDMediLeaves) specifies Phyllanthus emblica (Amla), not Phyllanthus niruri as an earlier version of this file said. 'zenora' now has an entry, but its scientific identity is still unresolved — see its 'note' field. Arabic common names are only filled in where a real, sourced Arabic name was found; South/Southeast Asian and Central American plants with no standard Arabic common name are left blank rather than invented. Have a qualified person double-check anything here before it's used for real advice, not just for the graduation project. Added fields: growing_method, care, common_pests, geographic_distribution, safe_dosage (each with an _ar Arabic counterpart). Growing/care/pest info is sourced from general horticultural references (PFAF, tropical.theferns.info, CABI Compendium, extension services, etc.) — reasonable general guidance, not a substitute for local agricultural advice. safe_dosage is only given as a real value for common food-safe herbs; for anything classified poisonous/dangerous/highly_toxic it explicitly states there is no safe home dose, consistent with the app's safety messaging — this was a deliberate choice, not an oversight. Merged in description_ar/uses_ar/warnings_ar (full Arabic plant content) and toxicity_level (graduated safe/low_toxic/dangerous/highly_toxic/unknown scale) from an earlier session that this uploaded file was missing. Added 'reference_ar' (verified via live web search, not invented) for 22/26 plants — a dedicated Arabic-language source (mostly Arabic Wikipedia species pages) for the chatbot to cite alongside the existing English 'reference'. Left empty for bohera, devilbackbone, terminalia_arjuna, and zenora — no dedicated Arabic-language source could be verified for these at the time of writing. Added 'family_ar' (verified botanical Arabic family names, left in Latin where no standard Arabic name could be confirmed: Asphodelaceae, Crassulaceae, Phyllanthaceae) and 'habitat_ar' (reuses the already-verified geographic_distribution_ar text, since the two fields describe the same thing). Added real 'image_url'/'image_credit' (verified Wikimedia Commons files, properly licensed) for 4/25 plants so far -- Justicia, Lemon, Mint, Za'atar. The rest are still using the toxicity-level emoji icon as a placeholder until verified. Added structured 'recipes' (title/ingredients/steps/benefits, EN+AR) for the 9 plants whose safe_dosage already documented an established tea/infusion prep -- no recipe was added for plants whose own data says 'consult a professional' (Justicia, centella, thankuni, bohera, haritoki). Also added a top-level '_combo_recipes' list of 3 hand-picked, pre-vetted two-plant combos -- deliberately not auto-generated, since combining medicinal plants can carry real interaction risks. Added real 'image_url'/'image_credit' (verified Wikimedia Commons files) for the remaining resolvable species. Only 'zenora' has none, since its scientific identity was never confirmed (see earlier note) -- no species name means no way to verify an image actually shows the right plant, so it was left without one rather than guessing.",
+  "Justicia": {
+    "arabic_name": "",
+    "english_name": "Malabar nut (Vasaka)",
+    "scientific_name": "Justicia adhatoda",
+    "family": "Acanthaceae",
+    "description": "A dense evergreen shrub, 1–2.5 m tall, with large dark-green leaves and white, two-lipped flowers with violet veining, native to South and Southeast Asia.",
+    "active_compounds": [
+      "Vasicine",
+      "Vasicinone"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Traditionally used in Ayurvedic and Unani medicine as an expectorant for coughs, colds, and bronchitis",
+      "Leaf extracts have shown antimicrobial activity against several bacteria and fungi in lab studies",
+      "One of its alkaloids (vasicine) was the basis for the cough medicine bromhexine"
+    ],
+    "warnings": "Traditional use only — not a substitute for prescribed asthma/respiratory medication. Consult a doctor before use, especially during pregnancy.",
+    "habitat": "Native to South and Southeast Asia (Afghanistan to Indo-China); naturalized in parts of Africa and the Caribbean",
+    "image": "images/justicia.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Justicia%20adhatoda",
+      "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/justicia-adhatoda",
+      "https://link.springer.com/article/10.1007/s44372-024-00042-x"
+    ],
+    "growing_method": "Propagated mainly from stem cuttings, planted ~30 cm apart; grows well in a range of soils, best in alluvial soil with 700–1700 mm annual rainfall.",
+    "growing_method_ar": "تُكاثَر بشكل رئيسي من العُقَل الساقية، وتُزرع بمسافة نحو 30 سم بين النبتة والأخرى؛ وتنمو جيدًا في أنواع متعددة من التربة، وأفضلها التربة الغرينية بمعدل هطول مطري يتراوح بين 700 و1700 ملم سنويًا.",
+    "care": "Tolerant of dry soil once established; prefers shaded to semi-shaded spots; benefit from organic manure and weeding; avoid waterlogging (can cause root rot).",
+    "care_ar": "متحمِّلة للتربة الجافة بعد رسوخها، وتُفضِّل الأماكن الظليلة أو شبه الظليلة، وتستفيد من السماد العضوي وإزالة الأعشاب الضارة، مع تجنُّب تجمُّع المياه الذي قد يُسبِّب تعفُّن الجذور.",
+    "common_pests": [
+      "No serious pests or diseases commonly reported"
+    ],
+    "common_pests_ar": [
+      "لا توجد آفات أو أمراض خطيرة موثَّقة بشكل شائع"
+    ],
+    "geographic_distribution": "South and Southeast Asia; common up to 1200 m altitude in India, widely cultivated in tropical lowlands.",
+    "geographic_distribution_ar": "جنوب وجنوب شرق آسيا؛ منتشرة حتى ارتفاع 1200 متر في الهند، وتُزرع على نطاق واسع في المناطق الاستوائية المنخفضة.",
+    "safe_dosage": "No established over-the-counter dosage — traditionally prepared as a decoction under practitioner guidance. Consult a professional before use.",
+    "safe_dosage_ar": "لا توجد جرعة تجارية موثَّقة؛ إذ تُحضَّر تقليديًا على شكل منقوع بإشراف مختص. يُنصح باستشارة مختص قبل الاستخدام.",
+    "description_ar": "شجيرة كثيفة دائمة الخضرة، يتراوح ارتفاعها بين 1 و2.5 متر، ذات أوراق كبيرة داكنة الخضرة وأزهار بيضاء ثنائية الشفة ذات عروق أرجوانية، موطنها الأصلي جنوب وجنوب شرق آسيا.",
+    "uses_ar": [
+      "تُستخدم تقليديًا في الطب الأيورفيدي واليوناني كطارد للبلغم لعلاج السعال والزكام والتهاب الشعب الهوائية",
+      "أظهرت مستخلصات الأوراق نشاطًا مضادًا للميكروبات ضد عدد من أنواع البكتيريا والفطريات في دراسات مخبرية",
+      "شكَّل أحد قلويداتها (الفاسيسين) أساس دواء السعال المعروف باسم بروميكسين"
+    ],
+    "warnings_ar": "للاستخدام التقليدي فقط، ولا يُغني عن أدوية الربو أو الجهاز التنفسي الموصوفة طبيًا. يُنصح باستشارة طبيب قبل الاستخدام، لا سيما أثناء الحمل.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/بستاشيا_بيضاء"
+    ],
+    "family_ar": "الأقنثية",
+    "habitat_ar": "جنوب وجنوب شرق آسيا؛ منتشرة حتى ارتفاع 1200 متر في الهند، وتُزرع على نطاق واسع في المناطق الاستوائية المنخفضة.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Justicia_adhatoda_001.JPG",
+    "image_credit": "H. Zell, Wikimedia Commons, CC BY-SA 3.0"
+  },
+  "Lemon": {
+    "arabic_name": "ليمون",
+    "english_name": "Lemon",
+    "scientific_name": "Citrus limon",
+    "family": "Rutaceae",
+    "description": "A small, thorny evergreen tree bearing oval, bright-yellow acidic fruit; native to Asia and now cultivated worldwide.",
+    "active_compounds": [
+      "Citric acid",
+      "Vitamin C (ascorbic acid)",
+      "Limonene"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "High in vitamin C; juice traditionally used to help soothe sore throats and colds",
+      "Used in folk medicine as a mild digestive aid",
+      "Essential oil used in aromatherapy"
+    ],
+    "warnings": "Citrus can irritate acid reflux; the peel/oil may irritate skin exposed to sunlight (phytophotodermatitis).",
+    "habitat": "Cultivated worldwide in warm climates; originally from Asia",
+    "image": "images/lemon.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Citrus%20limon",
+      "https://medlineplus.gov/"
+    ],
+    "growing_method": "Grown from grafted saplings or seed in well-drained soil in full sun; commercial trees are usually grafted onto disease-resistant rootstock.",
+    "growing_method_ar": "تُزرع من شتلات مطعَّمة أو من البذور في تربة جيدة الصرف تحت أشعة الشمس الكاملة، وتُطعَّم الأشجار التجارية عادةً على أصول مقاومة للأمراض.",
+    "care": "Needs regular watering (especially when fruiting), occasional feeding with citrus fertilizer, and protection from frost.",
+    "care_ar": "تحتاج إلى ريّ منتظم، خصوصًا أثناء الإثمار، وتسميد دوري بسماد خاص بالحمضيات، وحماية من الصقيع.",
+    "common_pests": [
+      "Citrus leafminer",
+      "Aphids",
+      "Scale insects",
+      "Citrus canker (bacterial disease)"
+    ],
+    "common_pests_ar": [
+      "حفار أوراق الحمضيات",
+      "المنّ",
+      "الحشرات القشرية",
+      "تقرُّح الحمضيات (مرض بكتيري)"
+    ],
+    "geographic_distribution": "Originally from Asia; now cultivated worldwide in warm, subtropical to Mediterranean climates.",
+    "geographic_distribution_ar": "أصلها من آسيا، وتُزرع حاليًا في مختلف أنحاء العالم في المناخات الدافئة وشبه الاستوائية والمتوسطية.",
+    "safe_dosage": "Commonly consumed as juice from 1 fruit (~30-50 ml juice) diluted in water, or zest/slices in tea, as part of normal diet.",
+    "safe_dosage_ar": "تُستهلك عادةً على شكل عصير حبة واحدة (نحو 30-50 مل عصير) مخفَّف بالماء، أو كقشور أو شرائح في الشاي، ضمن النظام الغذائي المعتاد.",
+    "description_ar": "شجرة صغيرة شائكة دائمة الخضرة تحمل ثمارًا بيضاوية صفراء زاهية حامضة الطعم، موطنها الأصلي آسيا، وتُزرع حاليًا في مختلف أنحاء العالم.",
+    "uses_ar": [
+      "غنيّ بفيتامين C، ويُستخدم عصيره تقليديًا للمساعدة على تهدئة التهاب الحلق والزكام",
+      "يُستخدم في الطب الشعبي كمساعد هضمي خفيف",
+      "يُستخدم زيته العطري في العلاج بالروائح"
+    ],
+    "warnings_ar": "قد تُهيّج الحمضيات ارتجاع الحمض المعدي، وقد تُهيّج القشرة أو الزيت الجلدَ المعرَّض لأشعة الشمس (التهاب الجلد الضوئي).",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/ليمون_حامض"
+    ],
+    "family_ar": "السذابية",
+    "habitat_ar": "أصلها من آسيا، وتُزرع حاليًا في مختلف أنحاء العالم في المناخات الدافئة وشبه الاستوائية والمتوسطية.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citrus_limon_-_Lemon_tree_-_Limonero_-_Limoeiro.JPG",
+    "image_credit": "Xosema, Wikimedia Commons, CC BY-SA",
+    "recipes": [
+      {
+        "title": "Warm Lemon Drink",
+        "title_ar": "مشروب الليمون الدافئ",
+        "ingredients": [
+          "Juice of half a lemon",
+          "1 cup warm water",
+          "Honey to taste (optional)"
+        ],
+        "ingredients_ar": [
+          "عصير نصف ليمونة",
+          "كوب ماء دافئ",
+          "عسل حسب الرغبة (اختياري)"
+        ],
+        "steps": [
+          "Squeeze half a lemon into a cup of warm (not boiling) water.",
+          "Add honey if desired.",
+          "Stir and serve warm."
+        ],
+        "steps_ar": [
+          "اعصري نصف ليمونة بكوب ماء دافئ (وليس مغلياً جداً حتى لا يفقد فيتامين سي).",
+          "أضيفي العسل إذا رغبتِ.",
+          "قلّبي وقدّميه دافئاً."
+        ],
+        "benefits": [
+          "High in vitamin C; traditionally used to soothe sore throats and colds",
+          "Mild digestive aid"
+        ],
+        "benefits_ar": [
+          "غني بفيتامين سي، يستخدم تقليدياً لتهدئة التهاب الحلق ونزلات البرد",
+          "مساعد هضمي خفيف"
+        ]
+      }
+    ]
+  },
+  "Mint": {
+    "arabic_name": "نعناع",
+    "english_name": "Mint (Spearmint)",
+    "scientific_name": "Mentha spicata",
+    "family": "Lamiaceae",
+    "description": "A fast-spreading perennial herb with bright green, toothed leaves and a strong, sweet-menthol aroma.",
+    "active_compounds": [
+      "Carvone",
+      "Menthol (lower amounts than peppermint)",
+      "Limonene"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Traditionally used to relieve indigestion, nausea, and bloating",
+      "Used as a mild decongestant and breath freshener",
+      "Also traditionally used for headaches and to ease muscle aches when applied as a diluted oil"
+    ],
+    "warnings": "Concentrated mint oil can worsen acid reflux in some people and should not be given to infants.",
+    "habitat": "Widely cultivated across Europe, Asia, and the Middle East",
+    "image": "images/mint.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Mentha%20spicata",
+      "https://www.nccih.nih.gov/"
+    ],
+    "growing_method": "Easily propagated from stem cuttings or root division; spreads aggressively via runners, so best grown in a container or contained bed.",
+    "growing_method_ar": "تُكاثَر بسهولة من العُقَل الساقية أو بتقسيم الجذور، وتنتشر بقوة عبر السيقان الجارية، لذا يُفضَّل زراعتها في وعاء أو حوض محدود.",
+    "care": "Prefers moist, well-drained soil and partial shade to full sun; regular trimming keeps growth bushy and prevents flowering (which reduces leaf flavor).",
+    "care_ar": "تُفضِّل التربة الرطبة جيدة الصرف والظل الجزئي إلى الشمس الكاملة؛ ويحافظ التقليم المنتظم على كثافة النمو ويمنع التزهير الذي يقلِّل من نكهة الأوراق.",
+    "common_pests": [
+      "Aphids",
+      "Spider mites",
+      "Mint rust (fungal disease)"
+    ],
+    "common_pests_ar": [
+      "المنّ",
+      "العناكب الحمراء",
+      "صدأ النعناع (مرض فطري)"
+    ],
+    "geographic_distribution": "Native to Europe and Asia; now cultivated worldwide, especially across the Mediterranean and Middle East.",
+    "geographic_distribution_ar": "موطنها الأصلي أوروبا وآسيا، وتُزرع حاليًا في مختلف أنحاء العالم، وخصوصًا في منطقة البحر المتوسط والشرق الأوسط.",
+    "safe_dosage": "Commonly used as 1-3 g dried leaf (or a few fresh leaves) per cup of tea, up to 2-3 cups daily.",
+    "safe_dosage_ar": "تُستخدم عادةً بمقدار 1-3 غرامات من الأوراق المجففة، أو عدد قليل من الأوراق الطازجة، لكل كوب شاي، وحتى كوبين أو ثلاثة أكواب يوميًا.",
+    "description_ar": "عشبة معمِّرة سريعة الانتشار، ذات أوراق خضراء زاهية مسنَّنة الحواف ورائحة نعناعية قوية.",
+    "uses_ar": [
+      "تُستخدم تقليديًا لتخفيف عسر الهضم والغثيان والانتفاخ",
+      "تُستخدم كمزيل احتقان خفيف ومنعِّش للنفس",
+      "تُستخدم أيضًا تقليديًا لتخفيف الصداع وآلام العضلات عند استعمالها كزيت مخفَّف موضعيًا"
+    ],
+    "warnings_ar": "قد يزيد زيت النعناع المركَّز من ارتجاع الحمض المعدي لدى بعض الأشخاص، ولا يُعطى للرضّع.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/نعناع_مدبب"
+    ],
+    "family_ar": "الشفوية",
+    "habitat_ar": "موطنها الأصلي أوروبا وآسيا، وتُزرع حاليًا في مختلف أنحاء العالم، وخصوصًا في منطقة البحر المتوسط والشرق الأوسط.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mentha_spicata_var._viridis_001.JPG",
+    "image_credit": "H. Zell, Wikimedia Commons, CC BY-SA 3.0",
+    "recipes": [
+      {
+        "title": "Mint Tea",
+        "title_ar": "شاي النعناع",
+        "ingredients": [
+          "10-12 fresh mint leaves (or 1 tsp dried mint)",
+          "1 cup boiling water",
+          "Honey to taste (optional)"
+        ],
+        "ingredients_ar": [
+          "10-12 ورقة نعناع طازجة (أو ملعقة صغيرة نعناع مجفف)",
+          "كوب ماء مغلي",
+          "عسل حسب الرغبة (اختياري)"
+        ],
+        "steps": [
+          "Boil a cup of water.",
+          "Add the mint leaves.",
+          "Cover and steep for 5-7 minutes.",
+          "Strain.",
+          "Add honey if desired and serve warm."
+        ],
+        "steps_ar": [
+          "اغلي كوب ماء.",
+          "أضيفي أوراق النعناع للماء المغلي.",
+          "غطي واتركيه منقوعاً 5-7 دقائق.",
+          "صفّي المشروب.",
+          "أضيفي العسل إذا رغبتِ وقدّميه دافئاً."
+        ],
+        "benefits": [
+          "Traditionally used to ease indigestion, nausea and bloating",
+          "Mild decongestant, freshens breath"
+        ],
+        "benefits_ar": [
+          "يساعد تقليدياً على تهدئة عسر الهضم والغثيان والانتفاخ",
+          "مزيل احتقان خفيف ومنعش للنفس"
+        ]
+      }
+    ]
+  },
+  "Za'atar": {
+    "arabic_name": "زعتر",
+    "english_name": "Za'atar (Syrian oregano / Bible hyssop)",
+    "scientific_name": "Origanum syriacum",
+    "family": "Lamiaceae",
+    "description": "A perennial subshrub with small grey-green, aromatic leaves and white or pale-pink flowers, native to the Levant.",
+    "active_compounds": [
+      "Thymol",
+      "Carvacrol"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Traditionally used in Middle Eastern folk medicine as an antiseptic, expectorant, and digestive aid",
+      "Essential oil (rich in thymol/carvacrol) shows antimicrobial and antioxidant activity in lab studies",
+      "Traditionally used in Levantine folk medicine for respiratory complaints such as coughs and bronchitis"
+    ],
+    "warnings": "Essential oil is very concentrated and can irritate skin/mucous membranes if used undiluted.",
+    "habitat": "Native to the Levant (Eastern Mediterranean)",
+    "image": "images/zaatar.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Origanum%20syriacum",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8156404/"
+    ],
+    "growing_method": "Grown from seed or cuttings in well-drained, rocky or sandy soil; needs full sun and is drought-tolerant once established.",
+    "growing_method_ar": "تُزرع من البذور أو العُقَل في تربة صخرية أو رملية جيدة الصرف، وتحتاج إلى شمس كاملة، وهي متحمِّلة للجفاف بعد رسوخها.",
+    "care": "Minimal watering needed once mature; benefits from light pruning after flowering to keep a compact shape.",
+    "care_ar": "تحتاج إلى ريّ قليل بعد نضجها، وتستفيد من تقليم خفيف بعد التزهير للحفاظ على شكلها المدمج.",
+    "common_pests": [
+      "Generally pest-resistant",
+      "Occasional aphids or spider mites in humid conditions"
+    ],
+    "common_pests_ar": [
+      "مقاومة للآفات بشكل عام",
+      "قد يظهر المنّ أو العناكب الحمراء أحيانًا في الأجواء الرطبة"
+    ],
+    "geographic_distribution": "Native to the Levant (Jordan, Palestine, Lebanon, Syria); grows wild on rocky hillsides across the Eastern Mediterranean.",
+    "geographic_distribution_ar": "موطنها الأصلي بلاد الشام (الأردن وفلسطين ولبنان وسوريا)، وتنمو برّيًا على التلال الصخرية في شرق البحر المتوسط.",
+    "safe_dosage": "Commonly used as a culinary herb/spice blend (za'atar mix) without a set medicinal dose; as tea, 1-2 g dried leaf per cup.",
+    "safe_dosage_ar": "تُستخدم عادةً كعشبة أو خلطة توابل للطهي (خلطة الزعتر) دون جرعة طبية محدَّدة؛ وكشاي، بمقدار 1-2 غرام من الأوراق المجففة لكل كوب.",
+    "description_ar": "شُجيرة معمِّرة صغيرة ذات أوراق رمادية مخضرَّة عطرية وأزهار بيضاء أو وردية فاتحة، موطنها الأصلي بلاد الشام.",
+    "uses_ar": [
+      "يُستخدم تقليديًا في الطب الشعبي بالشرق الأوسط كمطهِّر وطارد للبلغم ومساعد هضمي",
+      "يُظهر زيته العطري، الغني بالثيمول والكارفاكرول، نشاطًا مضادًا للميكروبات ومضادًا للأكسدة في دراسات مخبرية",
+      "يُستخدم تقليديًا في الطب الشعبي بالمشرق العربي لعلاج مشكلات الجهاز التنفسي كالسعال والتهاب الشُّعب الهوائية"
+    ],
+    "warnings_ar": "الزيت العطري مركَّز جدًا وقد يُهيّج الجلد أو الأغشية المخاطية إذا استُخدم دون تخفيف.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/زعتر_سوري"
+    ],
+    "family_ar": "الشفوية",
+    "habitat_ar": "موطنها الأصلي بلاد الشام (الأردن وفلسطين ولبنان وسوريا)، وتنمو برّيًا على التلال الصخرية في شرق البحر المتوسط.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Origanum_syriacum_Nachal_Kziv.JPG",
+    "image_credit": "Wikimedia Commons contributors, CC BY-SA 3.0",
+    "recipes": [
+      {
+        "title": "Za'atar Tea",
+        "title_ar": "شاي الزعتر",
+        "ingredients": [
+          "1 tsp dried za'atar leaf",
+          "1 cup boiling water",
+          "Honey or lemon to taste (optional)"
+        ],
+        "ingredients_ar": [
+          "ملعقة صغيرة زعتر مجفف",
+          "كوب ماء مغلي",
+          "عسل أو ليمون حسب الرغبة (اختياري)"
+        ],
+        "steps": [
+          "Boil a cup of water.",
+          "Add the dried za'atar.",
+          "Cover and steep for 5-8 minutes.",
+          "Strain and serve warm."
+        ],
+        "steps_ar": [
+          "اغلي كوب ماء.",
+          "أضيفي الزعتر المجفف.",
+          "غطي واتركيه منقوعاً 5-8 دقائق.",
+          "صفّي المشروب وقدّميه دافئاً."
+        ],
+        "benefits": [
+          "Traditionally used as an antiseptic and digestive aid",
+          "Traditionally used as an expectorant"
+        ],
+        "benefits_ar": [
+          "استخدام تقليدي كمطهر ومساعد هضمي",
+          "استخدام تقليدي كطارد للبلغم"
+        ]
+      }
+    ]
+  },
+  "aloevera": {
+    "arabic_name": "صبار",
+    "english_name": "Aloe Vera",
+    "scientific_name": "Aloe vera",
+    "family": "Asphodelaceae",
+    "description": "A succulent with thick, fleshy, serrated grey-green leaves arranged in a rosette, native to the Arabian Peninsula.",
+    "active_compounds": [
+      "Acemannan",
+      "Aloin (in the latex layer, not the gel)"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Gel is commonly used topically for minor burns, sunburn, and skin irritation",
+      "Used in cosmetics as a moisturizer",
+      "Also studied for its potential to support healing of minor wounds and mouth ulcers when applied topically"
+    ],
+    "warnings": "The yellow latex under the skin (not the clear gel) is a strong laxative and can be harmful if taken orally in large amounts; avoid oral use during pregnancy.",
+    "habitat": "Native to the Arabian Peninsula; cultivated worldwide",
+    "image": "images/aloevera.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Aloe%20vera",
+      "https://www.nccih.nih.gov/health/aloe-vera"
+    ],
+    "growing_method": "Propagated from offsets (\"pups\") that grow at the base of the mother plant; needs sandy, well-draining soil and bright light.",
+    "growing_method_ar": "تُكاثَر من الفسائل التي تنمو عند قاعدة النبتة الأم، وتحتاج إلى تربة رملية جيدة الصرف وضوء ساطع.",
+    "care": "Water deeply but infrequently, letting soil dry between waterings; avoid overwatering, which causes root rot. Tolerates neglect well.",
+    "care_ar": "تُروى بعمق وعلى فترات متباعدة، مع ترك التربة تجفّ بين كل ريّ وآخر، مع تجنُّب الريّ الزائد الذي يُسبِّب تعفُّن الجذور. متحمِّلة للإهمال بدرجة جيدة.",
+    "common_pests": [
+      "Mealybugs",
+      "Aloe rust",
+      "Root rot from overwatering"
+    ],
+    "common_pests_ar": [
+      "البقّ الدقيقي",
+      "صدأ الصبّار",
+      "تعفُّن الجذور نتيجة الريّ الزائد"
+    ],
+    "geographic_distribution": "Native to the Arabian Peninsula; naturalized and cultivated across North Africa, the Mediterranean, and worldwide in warm climates.",
+    "geographic_distribution_ar": "موطنه الأصلي شبه الجزيرة العربية، وقد تجنَّس وانتشرت زراعته في شمال أفريقيا ومنطقة البحر المتوسط وحول العالم في المناخات الدافئة.",
+    "safe_dosage": "Topical gel applied as needed to skin. Oral use of the latex (yellow layer) is not recommended without professional guidance.",
+    "safe_dosage_ar": "يُستخدم الجل موضعيًا على الجلد بحسب الحاجة. لا يُنصح باستخدام اللاتكس (الطبقة الصفراء) عن طريق الفم دون إرشاد مختص.",
+    "description_ar": "نبات عصاري ذو أوراق سميكة لحمية مسنَّنة رمادية مخضرَّة، مرتَّبة على شكل وردة، موطنه الأصلي شبه الجزيرة العربية.",
+    "uses_ar": [
+      "يُستخدم الجل عادةً موضعيًا لعلاج الحروق البسيطة وحروق الشمس وتهيّج الجلد",
+      "يُستخدم في مستحضرات التجميل كمرطِّب",
+      "خضعت أيضًا للدراسة لدورها المحتمل في دعم التئام الجروح البسيطة وتقرّحات الفم عند استعمالها موضعيًا"
+    ],
+    "warnings_ar": "اللاتكس الأصفر الموجود تحت القشرة (وليس الجل الصافي) مليِّن قوي، وقد يكون ضارًا إذا أُخذ عن طريق الفم بكميات كبيرة؛ يجب تجنُّب استخدامه فمويًا أثناء الحمل.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/صبر_حقيقي"
+    ],
+    "habitat_ar": "موطنه الأصلي شبه الجزيرة العربية، وقد تجنَّس وانتشرت زراعته في شمال أفريقيا ومنطقة البحر المتوسط وحول العالم في المناخات الدافئة.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr_011104-0040_Aloe_vera.jpg",
+    "image_credit": "Forest & Kim Starr, Wikimedia Commons, CC BY 3.0"
+  },
+  "bohera": {
+    "arabic_name": "بليلج",
+    "english_name": "Bahera / Beleric Myrobalan",
+    "scientific_name": "Terminalia bellirica",
+    "family": "Combretaceae",
+    "description": "A tall deciduous tree, up to 20–22 m, with broadly elliptic leaves clustered near the branch tips, native to the Indian subcontinent.",
+    "active_compounds": [
+      "Tannins",
+      "Gallic acid",
+      "Ellagic acid"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "One of the three fruits in the classical Ayurvedic formula Triphala",
+      "Traditionally used for coughs, digestive complaints, and as an astringent",
+      "Traditionally believed in Ayurveda to support eye health and general vitality"
+    ],
+    "warnings": "Traditional use only; not well studied in modern clinical trials. Avoid during pregnancy without medical advice.",
+    "habitat": "Indian subcontinent and Southeast Asia (India, Pakistan, Nepal, Bangladesh, Sri Lanka)",
+    "image": "images/bohera.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Terminalia%20bellirica",
+      "https://www.sciencedirect.com/science/article/abs/pii/S0944711320301094"
+    ],
+    "growing_method": "Propagated from seed; grows best in fertile, well-drained loam soil in tropical lowland forests.",
+    "growing_method_ar": "تُكاثَر من البذور، وتنمو بشكل أفضل في تربة طينية خصبة جيدة الصرف، في الغابات الاستوائية المنخفضة.",
+    "care": "Low-maintenance once established as a forest tree; tolerates a range of soils but not waterlogging.",
+    "care_ar": "قليلة الاحتياجات بعد رسوخها كشجرة غابة، ومتحمِّلة لأنواع متعددة من التربة، باستثناء التربة المُشبَعة بالمياه.",
+    "common_pests": [
+      "Generally hardy with few reported serious pests"
+    ],
+    "common_pests_ar": [
+      "قوية بشكل عام مع قلة الآفات الخطيرة الموثَّقة"
+    ],
+    "geographic_distribution": "Indian subcontinent and Southeast Asia (India, Pakistan, Nepal, Bangladesh, Sri Lanka, Myanmar, Thailand).",
+    "geographic_distribution_ar": "شبه القارة الهندية وجنوب شرق آسيا (الهند وباكستان ونيبال وبنغلاديش وسريلانكا وميانمار وتايلاند).",
+    "safe_dosage": "No established over-the-counter dosage — traditionally used as part of the Triphala formula under practitioner guidance.",
+    "safe_dosage_ar": "لا توجد جرعة تجارية موثَّقة؛ إذ تُستخدم تقليديًا ضمن تركيبة Triphala بإشراف مختص.",
+    "description_ar": "شجرة نفضية طويلة، يصل ارتفاعها إلى 20-22 مترًا، ذات أوراق بيضاوية عريضة متجمِّعة قرب أطراف الأغصان، موطنها الأصلي شبه القارة الهندية.",
+    "uses_ar": [
+      "إحدى الثمار الثلاث المكوِّنة لتركيبة Triphala الأيورفيدية الكلاسيكية",
+      "تُستخدم تقليديًا لعلاج السعال ومشكلات الهضم، وكمادة قابضة",
+      "يُعتقد تقليديًا في الطب الأيورفيدي أنها تدعم صحة العين والحيوية العامة"
+    ],
+    "warnings_ar": "للاستخدام التقليدي فقط، ولم تخضع لدراسات سريرية حديثة كافية. يُنصح بتجنُّب استخدامها أثناء الحمل دون استشارة طبية.",
+    "toxicity_level": "safe",
+    "reference_ar": [],
+    "family_ar": "الرمرامية",
+    "habitat_ar": "شبه القارة الهندية وجنوب شرق آسيا (الهند وباكستان ونيبال وبنغلاديش وسريلانكا وميانمار وتايلاند).",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Terminalia%20bellirica%20(Gaertn.)%20Roxb.%20(48918274178).jpg",
+    "image_credit": "Wikimedia Commons contributors"
+  },
+  "centella": {
+    "arabic_name": "",
+    "english_name": "Centella / Gotu Kola",
+    "scientific_name": "Centella asiatica",
+    "family": "Apiaceae",
+    "description": "A small creeping herb with round, fan-shaped leaves and tiny pink-white flowers, growing in wet, tropical ground.",
+    "active_compounds": [
+      "Asiaticoside",
+      "Madecassoside",
+      "Asiatic acid"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Traditionally used topically to support wound healing",
+      "Studied for possible mild cognitive and circulatory benefits",
+      "Also traditionally used in Ayurveda to help calm the nervous system during times of stress"
+    ],
+    "warnings": "May cause skin irritation in some people when applied topically; ask a doctor before use if pregnant or on medication.",
+    "habitat": "Wetlands of tropical Asia, including the Indian subcontinent and Southeast Asia",
+    "image": "images/centella.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Centella%20asiatica",
+      "https://www.nccih.nih.gov/"
+    ],
+    "note": "Same species as 'thankuni' in this dataset — Centella asiatica is the scientific/English name, Thankuni is the Bengali common name. In the app, show the user this equivalence rather than treating them as two different plants.",
+    "growing_method": "Propagated from runners/stolons or division; grows as a low creeping groundcover in consistently moist soil.",
+    "growing_method_ar": "تُكاثَر من السيقان الزاحفة أو بالتقسيم، وتنمو كغطاء أرضي منخفض في تربة رطبة باستمرار.",
+    "care": "Keep soil moist and warm; trim regularly to control spread (can become invasive); harvest outer leaves, leaving inner ones to keep growing.",
+    "care_ar": "يجب إبقاء التربة رطبة ودافئة، مع التقليم المنتظم للتحكُّم في انتشارها، إذ قد تصبح غازية، مع حصاد الأوراق الخارجية وترك الداخلية لمواصلة النمو.",
+    "common_pests": [
+      "Slugs and snails",
+      "Fungal leaf diseases in overly wet conditions"
+    ],
+    "common_pests_ar": [
+      "البزّاقات والحلزون",
+      "أمراض فطرية في الأوراق في الأجواء الرطبة الزائدة"
+    ],
+    "geographic_distribution": "Wetlands of tropical Asia including the Indian subcontinent, Southeast Asia, and southern China.",
+    "geographic_distribution_ar": "الأراضي الرطبة في آسيا الاستوائية، بما في ذلك شبه القارة الهندية وجنوب شرق آسيا وجنوب الصين.",
+    "safe_dosage": "No established over-the-counter dosage for internal use; commonly applied topically. Consult a professional for internal use.",
+    "safe_dosage_ar": "لا توجد جرعة تجارية موثَّقة للاستخدام الداخلي؛ إذ تُستخدم عادةً موضعيًا. يُنصح باستشارة مختص للاستخدام الداخلي.",
+    "description_ar": "عشبة زاحفة صغيرة ذات أوراق دائرية على شكل مروحة وأزهار وردية بيضاء صغيرة، تنمو في أراضٍ استوائية رطبة.",
+    "uses_ar": [
+      "تُستخدم تقليديًا موضعيًا لدعم التئام الجروح",
+      "خضعت للدراسة بحثًا عن فوائد إدراكية ودورانية طفيفة محتملة",
+      "تُستخدم أيضًا تقليديًا في الطب الأيورفيدي للمساعدة على تهدئة الجهاز العصبي وقت التوتر"
+    ],
+    "warnings_ar": "قد تُسبِّب تهيّجًا جلديًا لدى بعض الأشخاص عند استخدامها موضعيًا؛ يُنصح باستشارة طبيب قبل الاستخدام في حالة الحمل أو تناول أدوية أخرى.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/كينتيللا_أسياتيكا"
+    ],
+    "family_ar": "الخيمية",
+    "habitat_ar": "الأراضي الرطبة في آسيا الاستوائية، بما في ذلك شبه القارة الهندية وجنوب شرق آسيا وجنوب الصين.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pegaga_(Centella_asiatica).jpg",
+    "image_credit": "Wikimedia Commons contributors, CC BY-SA 4.0"
+  },
+  "chamomile": {
+    "arabic_name": "بابونج",
+    "english_name": "Chamomile",
+    "scientific_name": "Matricaria chamomilla",
+    "family": "Asteraceae",
+    "description": "A low, branching annual herb with feathery leaves and small daisy-like flowers (white petals, yellow center).",
+    "active_compounds": [
+      "Apigenin",
+      "Bisabolol",
+      "Chamazulene"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "May help improve sleep and reduce mild anxiety when taken as tea",
+      "May help reduce inflammation and soothe an upset stomach",
+      "Also used topically for skin irritation and as a mouth rinse for minor mouth and gum discomfort"
+    ],
+    "warnings": "People allergic to plants in the Asteraceae/daisy family (ragweed, marigolds) may have an allergic reaction.",
+    "habitat": "Native to Europe and Western Asia; widely cultivated",
+    "image": "images/chamomile.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Matricaria%20chamomilla",
+      "https://www.nccih.nih.gov/health/chamomile"
+    ],
+    "growing_method": "Grown easily from seed sown directly in the garden; prefers full sun to light shade and well-drained soil.",
+    "growing_method_ar": "تُزرع بسهولة من البذور التي تُنثر مباشرةً في الحديقة، وتُفضِّل الشمس الكاملة إلى الظل الخفيف، والتربة جيدة الصرف.",
+    "care": "Water moderately; deadhead spent flowers to encourage more blooms; generally low-maintenance.",
+    "care_ar": "تُروى باعتدال، ويُنصح بإزالة الأزهار الذابلة لتشجيع مزيد من الإزهار؛ وهي قليلة الاحتياجات بشكل عام.",
+    "common_pests": [
+      "Aphids",
+      "Powdery mildew in humid, crowded conditions"
+    ],
+    "common_pests_ar": [
+      "المنّ",
+      "البياض الدقيقي في الأجواء الرطبة والمزدحمة"
+    ],
+    "geographic_distribution": "Native to Europe and Western Asia; widely cultivated across the Mediterranean, Europe, and North America.",
+    "geographic_distribution_ar": "موطنها الأصلي أوروبا وغرب آسيا، وتُزرع على نطاق واسع في منطقة البحر المتوسط وأوروبا وأمريكا الشمالية.",
+    "safe_dosage": "Commonly used as 1-2 g dried flowers per cup of tea, up to 3 cups daily.",
+    "safe_dosage_ar": "تُستخدم عادةً بمقدار 1-2 غرام من الأزهار المجففة لكل كوب شاي، وحتى ثلاثة أكواب يوميًا.",
+    "description_ar": "عشبة حولية منخفضة متفرِّعة، ذات أوراق ريشية وأزهار صغيرة شبيهة بالإقحوان، بتلات بيضاء ومركز أصفر.",
+    "uses_ar": [
+      "قد تساعد على تحسين النوم وتقليل القلق الخفيف عند تناولها على شكل شاي",
+      "قد تساعد على تقليل الالتهاب وتهدئة اضطراب المعدة",
+      "تُستخدم أيضًا موضعيًا لتهيّج الجلد، وكغسول للفم لتخفيف انزعاج الفم واللثة البسيط"
+    ],
+    "warnings_ar": "قد يتعرَّض الأشخاص الذين يعانون من حساسية تجاه نباتات الفصيلة النجمية (كالأقحوان والقطيفة) لردّ فعل تحسُّسي.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/بابونج_ألماني"
+    ],
+    "family_ar": "النجمية",
+    "habitat_ar": "موطنها الأصلي أوروبا وغرب آسيا، وتُزرع على نطاق واسع في منطقة البحر المتوسط وأوروبا وأمريكا الشمالية.",
+    "recipes": [
+      {
+        "title": "Chamomile Tea",
+        "title_ar": "شاي البابونج",
+        "ingredients": [
+          "1-2 g dried chamomile flowers (~1 tsp)",
+          "1 cup boiling water",
+          "Honey to taste (optional)"
+        ],
+        "ingredients_ar": [
+          "1-2 غرام أزهار بابونج مجففة (ملعقة صغيرة تقريباً)",
+          "كوب ماء مغلي",
+          "عسل حسب الرغبة (اختياري)"
+        ],
+        "steps": [
+          "Boil a cup of water.",
+          "Add the chamomile flowers.",
+          "Cover and steep for 5-10 minutes.",
+          "Strain.",
+          "Add honey if desired and serve warm."
+        ],
+        "steps_ar": [
+          "اغلي كوب ماء.",
+          "أضيفي أزهار البابونج.",
+          "غطي واتركيه منقوعاً 5-10 دقائق.",
+          "صفّي المشروب.",
+          "أضيفي العسل إذا رغبتِ وقدّميه دافئاً."
+        ],
+        "benefits": [
+          "May help improve sleep and ease mild anxiety",
+          "May help soothe an upset stomach"
+        ],
+        "benefits_ar": [
+          "قد يساعد على تحسين النوم وتقليل القلق الخفيف",
+          "قد يساعد على تهدئة اضطراب المعدة"
+        ]
+      }
+    ],
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Matricaria_chamomilla_flower_(26).jpg",
+    "image_credit": "Wikimedia Commons contributors"
+  },
+  "colocynth": {
+    "arabic_name": "حنظل",
+    "english_name": "Colocynth / Bitter Apple",
+    "scientific_name": "Citrullus colocynthis",
+    "family": "Cucurbitaceae",
+    "description": "A trailing vine with lobed leaves and small, round, hard fruit that looks like a miniature striped melon, native to arid regions.",
+    "active_compounds": [
+      "Cucurbitacins (e.g. cucurbitacin E)"
+    ],
+    "medicinal": true,
+    "poisonous": true,
+    "uses": [
+      "Historically used in very small, prepared doses as a strong laxative in traditional medicine",
+      "Also referenced historically in Middle Eastern and North African folk medicine for digestive complaints, though its narrow safety margin has led modern practice to favor safer alternatives"
+    ],
+    "warnings": "The fruit pulp is a powerful, potentially dangerous purgative — overdose can cause severe gastrointestinal damage and has been linked to fatalities. Not for self-medication.",
+    "habitat": "Arid regions of the Mediterranean, Middle East, and North Africa",
+    "image": "images/colocynth.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Citrullus%20colocynthis",
+      "https://www.sciencedirect.com/"
+    ],
+    "growing_method": "Grown from seed in sandy, well-drained soil; highly drought-tolerant, suited to arid and semi-arid climates.",
+    "growing_method_ar": "تُزرع من البذور في تربة رملية جيدة الصرف، وهي شديدة التحمُّل للجفاف، وتناسب المناخات القاحلة وشبه القاحلة.",
+    "care": "Needs minimal water once established; a vigorous trailing vine that may need space to spread or support to climb.",
+    "care_ar": "تحتاج إلى ماء قليل بعد رسوخها؛ وهي نبتة متسلِّقة زاحفة قوية قد تحتاج إلى مساحة للانتشار أو دعامة للتسلُّق.",
+    "common_pests": [
+      "Aphids",
+      "Cucumber beetles",
+      "Powdery mildew (common in the cucurbit family)"
+    ],
+    "common_pests_ar": [
+      "المنّ",
+      "خنافس الخيار",
+      "البياض الدقيقي (شائع في الفصيلة القرعية)"
+    ],
+    "geographic_distribution": "Arid regions of the Mediterranean, Middle East, and North Africa, including desert areas of Jordan.",
+    "geographic_distribution_ar": "المناطق القاحلة في البحر المتوسط والشرق الأوسط وشمال أفريقيا، بما في ذلك المناطق الصحراوية في الأردن.",
+    "safe_dosage": "No safe home dose established — this plant is not for self-medication. Consult a qualified herbalist or physician.",
+    "safe_dosage_ar": "لا توجد جرعة منزلية آمنة موثّقة لهذا النبات، وهو غير مخصَّص للعلاج الذاتي. يجب استشارة معالج أعشاب مؤهَّل أو طبيب.",
+    "description_ar": "نبات متسلِّق ذو أوراق مفصَّصة وثمار صغيرة صلبة مستديرة تشبه بطيخة مخطَّطة مصغَّرة، موطنه الأصلي المناطق القاحلة.",
+    "uses_ar": [
+      "استُخدم تاريخيًا بجرعات محضَّرة صغيرة جدًا كمليِّن قوي في الطب التقليدي",
+      "وردت أيضًا تاريخيًا في الطب الشعبي بالشرق الأوسط وشمال أفريقيا لعلاج مشكلات هضمية، إلا أن هامش الأمان الضيق جعل الممارسة الحديثة تفضّل بدائل أكثر أمانًا"
+    ],
+    "warnings_ar": "لبّ الثمرة مليِّن قوي وخطير محتمَل؛ إذ قد تُسبِّب الجرعة الزائدة ضررًا هضميًا شديدًا، وقد ارتبطت بحالات وفاة. غير مخصَّص للعلاج الذاتي مطلقًا.",
+    "toxicity_level": "highly_toxic",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/حنظل"
+    ],
+    "family_ar": "القرعية",
+    "habitat_ar": "المناطق القاحلة في البحر المتوسط والشرق الأوسط وشمال أفريقيا، بما في ذلك المناطق الصحراوية في الأردن.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citrullus_colocynthis_003.JPG",
+    "image_credit": "H. Zell, Wikimedia Commons, CC BY-SA 3.0"
+  },
+  "deadly_nightshade": {
+    "arabic_name": "ست الحسن",
+    "english_name": "Deadly Nightshade / Belladonna",
+    "scientific_name": "Atropa belladonna",
+    "family": "Solanaceae",
+    "description": "A bushy perennial with dull green leaves, bell-shaped purple flowers, and shiny black berries — every part is toxic.",
+    "active_compounds": [
+      "Atropine",
+      "Scopolamine",
+      "Hyoscyamine"
+    ],
+    "medicinal": true,
+    "poisonous": true,
+    "uses": [
+      "Source of atropine, used in modern pharmaceutical/medical settings (e.g., eye exams) under strict clinical dosing",
+      "Historically used in the 16th–19th centuries in tiny cosmetic doses to dilate the pupils (giving the plant its name 'bella donna', Italian for 'beautiful lady') — a practice long abandoned due to its extreme toxicity"
+    ],
+    "warnings": "Highly toxic — all parts of the plant, especially the berries, can cause poisoning or death if ingested. Never use outside a controlled pharmaceutical/medical context.",
+    "habitat": "Europe, North Africa, and Western Asia",
+    "image": "images/deadly_nightshade.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Atropa%20belladonna",
+      "https://medlineplus.gov/"
+    ],
+    "growing_method": "Grown from seed (where legal to cultivate); prefers rich, moist, well-drained soil in partial shade — typically only grown in controlled/research settings.",
+    "growing_method_ar": "تُزرع من البذور حيثما يُسمح قانونيًا بزراعتها، وتُفضِّل تربة غنية رطبة جيدة الصرف في ظل جزئي، وعادةً ما تُزرع فقط في بيئات بحثية محكومة.",
+    "care": "Not recommended for home gardens due to toxicity; if grown, must be kept strictly away from children, pets, and food crops.",
+    "care_ar": "غير مستحسنة للحدائق المنزلية بسبب سمِّيتها؛ وفي حال زراعتها، يجب إبعادها تمامًا عن الأطفال والحيوانات الأليفة والمحاصيل الغذائية.",
+    "common_pests": [
+      "Generally pest-resistant due to its toxic alkaloids"
+    ],
+    "common_pests_ar": [
+      "مقاومة للآفات بشكل عام بسبب قلويداتها السامة"
+    ],
+    "geographic_distribution": "Europe, North Africa, and Western Asia, typically in shaded woodland and disturbed soil.",
+    "geographic_distribution_ar": "أوروبا وشمال أفريقيا وغرب آسيا، عادةً في الغابات المظللة والتربة المضطربة.",
+    "safe_dosage": "No safe home dose established — this plant is not for self-medication. Consult a qualified herbalist or physician.",
+    "safe_dosage_ar": "لا توجد جرعة منزلية آمنة موثّقة لهذا النبات، وهو غير مخصَّص للعلاج الذاتي. يجب استشارة معالج أعشاب مؤهَّل أو طبيب.",
+    "description_ar": "نبات معمِّر كثيف ذو أوراق خضراء باهتة وأزهار أرجوانية جرسية الشكل وثمار توت أسود لامع؛ وكل جزء منه سام.",
+    "uses_ar": [
+      "مصدر لمادة الأتروبين المستخدمة في الأوساط الصيدلانية والطبية الحديثة، كفحوصات العين، بجرعات سريرية دقيقة ومحدَّدة",
+      "استُخدمت تاريخيًا بين القرنين السادس عشر والتاسع عشر بجرعات تجميلية ضئيلة جدًا لتوسيع حدقة العين (ومن هنا اسمها 'bella donna' أي 'السيدة الجميلة' بالإيطالية) — وهي ممارسة هُجرت منذ زمن طويل بسبب سمّيتها الشديدة"
+    ],
+    "warnings_ar": "سام جدًا؛ إذ تحتوي جميع أجزاء النبات، وخاصة الثمار، على مواد قد تُسبِّب التسمم أو الوفاة عند ابتلاعها. يُمنع استخدامه خارج السياق الصيدلاني أو الطبي المحكوم.",
+    "toxicity_level": "highly_toxic",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/ست_الحسن"
+    ],
+    "family_ar": "الباذنجانية",
+    "habitat_ar": "أوروبا وشمال أفريقيا وغرب آسيا، عادةً في الغابات المظللة والتربة المضطربة.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atropa_belladonna_003.JPG",
+    "image_credit": "H. Zell, Wikimedia Commons, CC BY-SA 3.0"
+  },
+  "devilbackbone": {
+    "arabic_name": "",
+    "english_name": "Devil's Backbone",
+    "scientific_name": "Euphorbia tithymaloides",
+    "family": "Euphorbiaceae",
+    "description": "An erect succulent shrub with distinctive green, zigzag-shaped stems and a milky, irritant sap, native to Central America.",
+    "active_compounds": [
+      "Diterpene esters (in the milky latex)"
+    ],
+    "medicinal": true,
+    "poisonous": true,
+    "uses": [
+      "Used in some folk traditions for mouth ulcers, asthma, and skin conditions",
+      "Leaf juice also used in some traditional practices to help soothe minor cuts and insect stings, though the closely related species Kalanchoe daigremontiana carries a higher poisoning risk if ingested"
+    ],
+    "warnings": "The milky sap is toxic and can cause serious skin/eye irritation or burns on contact; ingestion can cause vomiting and gastric distress. Handle with gloves and eye protection.",
+    "habitat": "Native to Central America and the Caribbean; grown worldwide as a houseplant",
+    "image": "images/devilbackbone.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Euphorbia%20tithymaloides",
+      "https://plants.ces.ncsu.edu/plants/euphorbia-tithymaloides/"
+    ],
+    "growing_method": "Propagated easily from stem cuttings; grows in well-draining succulent/cactus soil mix in bright, indirect light.",
+    "growing_method_ar": "تُكاثَر بسهولة من العُقَل الساقية، وتنمو في خليط تربة مخصَّص للعصاريات والصبّار جيد الصرف، تحت ضوء ساطع غير مباشر.",
+    "care": "Drought-tolerant succulent — let soil dry between waterings; wear gloves when pruning due to irritant sap.",
+    "care_ar": "نبات عصاري متحمِّل للجفاف؛ يجب ترك التربة تجفّ بين كل ريّ وآخر، وارتداء قفازات عند التقليم بسبب العصارة المهيِّجة.",
+    "common_pests": [
+      "Mealybugs",
+      "Spider mites",
+      "Scale insects"
+    ],
+    "common_pests_ar": [
+      "البقّ الدقيقي",
+      "العناكب الحمراء",
+      "الحشرات القشرية"
+    ],
+    "geographic_distribution": "Native to Central America and the Caribbean; grown as an ornamental houseplant worldwide.",
+    "geographic_distribution_ar": "موطنها الأصلي أمريكا الوسطى ومنطقة الكاريبي، وتُزرع كنبتة زينة منزلية حول العالم.",
+    "safe_dosage": "No safe home dose established — this plant is not for self-medication. Consult a qualified herbalist or physician.",
+    "safe_dosage_ar": "لا توجد جرعة منزلية آمنة موثّقة لهذا النبات، وهو غير مخصَّص للعلاج الذاتي. يجب استشارة معالج أعشاب مؤهَّل أو طبيب.",
+    "description_ar": "شجيرة عصارية منتصبة ذات سيقان خضراء متعرِّجة مميَّزة وعصارة لبنية مهيِّجة، موطنها الأصلي أمريكا الوسطى.",
+    "uses_ar": [
+      "تُستخدم في بعض التقاليد الشعبية لعلاج تقرُّحات الفم والربو وبعض الحالات الجلدية",
+      "يُستخدم عصير أوراقها أيضًا في بعض الممارسات التقليدية للمساعدة على تهدئة الجروح البسيطة ولدغات الحشرات، إلا أن النوع القريب منها Kalanchoe daigremontiana يحمل خطر تسمّم أعلى في حال ابتلاعه"
+    ],
+    "warnings_ar": "العصارة اللبنية سامة، وقد تُسبِّب تهيّجًا جلديًا أو عينيًا شديدًا أو حروقًا عند ملامستها؛ وقد يُسبِّب ابتلاعها قيئًا واضطرابًا هضميًا. يجب التعامل معها بارتداء قفازات وحماية للعينين.",
+    "toxicity_level": "dangerous",
+    "reference_ar": [],
+    "family_ar": "الفربيونية",
+    "habitat_ar": "موطنها الأصلي أمريكا الوسطى ومنطقة الكاريبي، وتُزرع كنبتة زينة منزلية حول العالم.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Devil's_Backbone_(Euphorbia_tithymaloides).jpg",
+    "image_credit": "Wikimedia Commons contributors"
+  },
+  "haritoki": {
+    "arabic_name": "هليلج",
+    "english_name": "Haritaki",
+    "scientific_name": "Terminalia chebula",
+    "family": "Combretaceae",
+    "description": "A medium to large deciduous tree with elliptic leaves and small yellowish flowers, widely grown across South Asia.",
+    "active_compounds": [
+      "Chebulagic acid",
+      "Chebulinic acid",
+      "Tannins"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "One of the three fruits in the classical Ayurvedic formula Triphala",
+      "Traditionally used as a mild laxative and digestive aid",
+      "Also valued in Ayurveda as a general detoxifying and rejuvenating tonic (rasayana)"
+    ],
+    "warnings": "Traditional use only; avoid during pregnancy or with existing digestive conditions without medical advice.",
+    "habitat": "Indian subcontinent and Southeast Asia",
+    "image": "images/haritoki.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Terminalia%20chebula",
+      "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/terminalia-bellirica"
+    ],
+    "growing_method": "Propagated from seed; prefers wet tropical climates with loamy, well-draining, slightly acidic to neutral soil.",
+    "growing_method_ar": "تُكاثَر من البذور، وتُفضِّل المناخات الاستوائية الرطبة ذات التربة الطينية جيدة الصرف، الحمضية الخفيفة إلى المتعادلة.",
+    "care": "Needs bright direct sunlight and consistent watering to keep soil moist; prune during the dormant season to remove dead branches.",
+    "care_ar": "تحتاج إلى ضوء شمس مباشر ساطع وريّ منتظم للحفاظ على رطوبة التربة، ويُنصح بالتقليم في موسم السكون لإزالة الأغصان الميتة.",
+    "common_pests": [
+      "Caterpillars",
+      "Borers"
+    ],
+    "common_pests_ar": [
+      "اليرقات",
+      "الحفَّارات"
+    ],
+    "geographic_distribution": "South and Southeast Asia (India, Nepal, Bhutan, Sri Lanka, Bangladesh, parts of China).",
+    "geographic_distribution_ar": "جنوب وجنوب شرق آسيا (الهند ونيبال وبوتان وسريلانكا وبنغلاديش وأجزاء من الصين).",
+    "safe_dosage": "No established over-the-counter dosage — traditionally used as part of the Triphala formula under practitioner guidance.",
+    "safe_dosage_ar": "لا توجد جرعة تجارية موثَّقة؛ إذ تُستخدم تقليديًا ضمن تركيبة Triphala بإشراف مختص.",
+    "description_ar": "شجرة نفضية متوسطة إلى كبيرة الحجم، ذات أوراق بيضاوية وأزهار صفراء صغيرة، تُزرع على نطاق واسع في جنوب آسيا.",
+    "uses_ar": [
+      "إحدى الثمار الثلاث المكوِّنة لتركيبة Triphala الأيورفيدية الكلاسيكية",
+      "تُستخدم تقليديًا كمليِّن خفيف ومساعد هضمي",
+      "تحظى أيضًا بتقدير بالطب الأيورفيدي كمقوٍّ عام مُطهِّر ومجدِّد للحيوية (رasayana)"
+    ],
+    "warnings_ar": "للاستخدام التقليدي فقط؛ يُنصح بتجنُّب استخدامها أثناء الحمل أو في حال وجود حالات هضمية قائمة، دون استشارة طبية.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/هليلج_كابلي"
+    ],
+    "family_ar": "الرمرامية",
+    "habitat_ar": "جنوب وجنوب شرق آسيا (الهند ونيبال وبوتان وسريلانكا وبنغلاديش وأجزاء من الصين).",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Terminalia_chebula_Leaves_and_flowers.jpg",
+    "image_credit": "Wikimedia Commons contributors"
+  },
+  "hibiscus_rosa": {
+    "arabic_name": "خطمي وردي",
+    "english_name": "Hibiscus (China Rose)",
+    "scientific_name": "Hibiscus rosa-sinensis",
+    "family": "Malvaceae",
+    "description": "A woody evergreen shrub with glossy dark-green leaves and large, showy trumpet-shaped flowers, usually red.",
+    "active_compounds": [
+      "Anthocyanins",
+      "Flavonoids"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Flowers and leaves used in traditional medicine for hair care and as a mild diuretic",
+      "Used in some traditional practices to help manage blood pressure — evidence is stronger for the related species Hibiscus sabdariffa than for this one",
+      "Petals are also used in some traditional practices as a mild remedy for coughs and skin irritation"
+    ],
+    "warnings": "May interact with blood pressure medication; consult a doctor before regular medicinal use.",
+    "habitat": "Native to East Asia; grown as an ornamental worldwide",
+    "image": "images/hibiscus_rosa.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Hibiscus%20rosa-sinensis"
+    ],
+    "growing_method": "Propagated from stem cuttings, air layering, or seed; needs well-draining, organically rich soil and full sun.",
+    "growing_method_ar": "تُكاثَر من العُقَل الساقية أو الترقيد الهوائي أو البذور، وتحتاج إلى تربة جيدة الصرف غنية عضويًا وشمس كاملة.",
+    "care": "Water 1-2 inches weekly; fertilize every 4-6 weeks in growing season; prune in late winter/early spring to encourage blooming.",
+    "care_ar": "تُروى بمعدل 2.5-5 سم أسبوعيًا، وتُسمَّد كل 4-6 أسابيع خلال موسم النمو، وتُقلَّم في أواخر الشتاء أو أوائل الربيع لتشجيع الإزهار.",
+    "common_pests": [
+      "Aphids",
+      "Spider mites",
+      "Whiteflies",
+      "Mealybugs",
+      "Powdery mildew",
+      "Leaf spot"
+    ],
+    "common_pests_ar": [
+      "المنّ",
+      "العناكب الحمراء",
+      "الذبابة البيضاء",
+      "البقّ الدقيقي",
+      "البياض الدقيقي",
+      "تبقُّع الأوراق"
+    ],
+    "geographic_distribution": "Native to East Asia; grown as an ornamental worldwide in tropical and subtropical climates.",
+    "geographic_distribution_ar": "موطنها الأصلي شرق آسيا، وتُزرع كنبتة زينة حول العالم في المناخات الاستوائية وشبه الاستوائية.",
+    "safe_dosage": "No established over-the-counter dosage for this species specifically. Consult a professional before medicinal use.",
+    "safe_dosage_ar": "لا توجد جرعة تجارية موثَّقة لهذا النوع تحديدًا. يُنصح باستشارة مختص قبل الاستخدام الطبي.",
+    "description_ar": "شجيرة خشبية دائمة الخضرة، ذات أوراق داكنة الخضرة لامعة وأزهار كبيرة لافتة على شكل بوق، غالبًا حمراء اللون.",
+    "uses_ar": [
+      "تُستخدم الأزهار والأوراق في الطب التقليدي للعناية بالشعر، وكمدرّ خفيف للبول",
+      "تُستخدم في بعض الممارسات التقليدية للمساعدة على ضبط ضغط الدم، إلا أن الأدلة أقوى بالنسبة للنوع القريب Hibiscus sabdariffa مقارنةً بهذا النوع",
+      "تُستخدم البتلات أيضًا في بعض الممارسات التقليدية كعلاج خفيف للسعال وتهيّج الجلد"
+    ],
+    "warnings_ar": "قد تتفاعل مع أدوية ضغط الدم؛ يُنصح باستشارة طبيب قبل الاستخدام الطبي المنتظم.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/خطمي_وردي_صيني"
+    ],
+    "family_ar": "الخبازية",
+    "habitat_ar": "موطنها الأصلي شرق آسيا، وتُزرع كنبتة زينة حول العالم في المناخات الاستوائية وشبه الاستوائية.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hibiscus_rosa-sinensis_flower_2.JPG",
+    "image_credit": "B.navez, Wikimedia Commons, CC BY-SA"
+  },
+  "khuzama_lavender": {
+    "arabic_name": "خزامى",
+    "english_name": "Lavender",
+    "scientific_name": "Lavandula angustifolia",
+    "family": "Lamiaceae",
+    "description": "A small aromatic shrub with narrow grey-green leaves and spikes of purple-blue flowers, native to the Mediterranean.",
+    "active_compounds": [
+      "Linalool",
+      "Linalyl acetate"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Widely used in aromatherapy for relaxation and mild anxiety relief",
+      "Essential oil traditionally used for its antimicrobial and anti-inflammatory properties",
+      "Also traditionally used to help ease mild headaches and support better sleep"
+    ],
+    "warnings": "Essential oil should not be taken orally without medical guidance; may cause skin irritation undiluted.",
+    "habitat": "Native to the Mediterranean region; cultivated worldwide",
+    "image": "images/khuzama_lavender.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Lavandula%20angustifolia",
+      "https://hal.science/hal-05113068"
+    ],
+    "growing_method": "Grown from seed or cuttings in well-drained, slightly alkaline soil; needs full sun and good air circulation.",
+    "growing_method_ar": "تُزرع من البذور أو العُقَل في تربة جيدة الصرف خفيفة القلوية، وتحتاج إلى شمس كاملة وتهوية جيدة.",
+    "care": "Drought-tolerant once established; avoid overwatering and heavy, wet soils which cause root rot; light pruning after flowering keeps shape.",
+    "care_ar": "متحمِّلة للجفاف بعد رسوخها؛ يجب تجنُّب الريّ الزائد والتربة الثقيلة الرطبة التي تُسبِّب تعفُّن الجذور، ويحافظ التقليم الخفيف بعد التزهير على شكلها.",
+    "common_pests": [
+      "Generally pest-resistant",
+      "Occasional spittlebugs or root rot in wet soil"
+    ],
+    "common_pests_ar": [
+      "مقاومة للآفات بشكل عام",
+      "قد تظهر حشرات رغوية أو تعفُّن جذور أحيانًا في التربة الرطبة"
+    ],
+    "geographic_distribution": "Native to the Mediterranean region; widely cultivated in Europe, the Middle East, and worldwide.",
+    "geographic_distribution_ar": "موطنها الأصلي منطقة البحر المتوسط، وتُزرع على نطاق واسع في أوروبا والشرق الأوسط وحول العالم.",
+    "safe_dosage": "Commonly used as 1-2 g dried flowers per cup of tea; essential oil used in aromatherapy diffusers, not for oral use.",
+    "safe_dosage_ar": "تُستخدم عادةً بمقدار 1-2 غرام من الأزهار المجففة لكل كوب شاي؛ ويُستخدم زيتها العطري في أجهزة العلاج بالروائح، لا عن طريق الفم.",
+    "description_ar": "شجيرة عطرية صغيرة ذات أوراق رمادية مخضرَّة ضيقة وسنابل أزهار أرجوانية مزرقّة، موطنها الأصلي منطقة البحر المتوسط.",
+    "uses_ar": [
+      "تُستخدم على نطاق واسع في العلاج بالروائح للاسترخاء وتخفيف القلق الخفيف",
+      "يُستخدم زيتها العطري تقليديًا لخصائصه المضادة للميكروبات والالتهاب",
+      "تُستخدم أيضًا تقليديًا للمساعدة على تخفيف الصداع الخفيف ودعم نوم أفضل"
+    ],
+    "warnings_ar": "لا يُؤخذ الزيت العطري عن طريق الفم دون إرشاد طبي، وقد يُسبِّب تهيّجًا جلديًا إذا استُخدم دون تخفيف.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/خزامى_ضيقة_الأوراق"
+    ],
+    "family_ar": "الشفوية",
+    "habitat_ar": "موطنها الأصلي منطقة البحر المتوسط، وتُزرع على نطاق واسع في أوروبا والشرق الأوسط وحول العالم.",
+    "recipes": [
+      {
+        "title": "Lavender Tea",
+        "title_ar": "شاي الخزامى",
+        "ingredients": [
+          "1-2 g dried lavender flowers",
+          "1 cup boiling water",
+          "Honey to taste (optional)"
+        ],
+        "ingredients_ar": [
+          "1-2 غرام أزهار خزامى مجففة",
+          "كوب ماء مغلي",
+          "عسل حسب الرغبة (اختياري)"
+        ],
+        "steps": [
+          "Boil a cup of water.",
+          "Add the lavender flowers.",
+          "Cover and steep for 5-8 minutes.",
+          "Strain and serve warm.",
+          "Note: lavender essential oil is for aromatherapy/diffusers only, not for drinking."
+        ],
+        "steps_ar": [
+          "اغلي كوب ماء.",
+          "أضيفي أزهار الخزامى.",
+          "غطي واتركيه منقوعاً 5-8 دقائق.",
+          "صفّي المشروب وقدّميه دافئاً.",
+          "ملاحظة: زيت الخزامى العطري للاستنشاق فقط، غير مخصص للشرب."
+        ],
+        "benefits": [
+          "Widely used in aromatherapy for relaxation and mild anxiety relief"
+        ],
+        "benefits_ar": [
+          "يستخدم تقليدياً بالعلاج بالروائح للاسترخاء وتخفيف القلق الخفيف"
+        ]
+      }
+    ],
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lavandula_angustifolia_002.JPG",
+    "image_credit": "H. Zell, Wikimedia Commons, CC BY-SA 3.0"
+  },
+  "neem": {
+    "arabic_name": "نيم",
+    "english_name": "Neem",
+    "scientific_name": "Azadirachta indica",
+    "family": "Meliaceae",
+    "description": "A fast-growing evergreen tree with pinnate leaves and small white flowers, native to the Indian subcontinent.",
+    "active_compounds": [
+      "Azadirachtin",
+      "Nimbin"
+    ],
+    "medicinal": true,
+    "poisonous": true,
+    "uses": [
+      "Leaves and bark traditionally used for skin conditions and as an antibacterial/antifungal agent",
+      "Widely used as a natural pesticide (neem oil)",
+      "Twigs have traditionally been used as a natural toothbrush to support dental and gum hygiene"
+    ],
+    "warnings": "Neem oil/seed extract can be toxic if ingested, especially by infants and young children — has caused serious poisoning in reported cases. Not for internal use without medical supervision.",
+    "habitat": "Native to the Indian subcontinent; cultivated across South Asia and Africa",
+    "image": "images/neem.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Azadirachta%20indica",
+      "https://medlineplus.gov/"
+    ],
+    "growing_method": "Propagated from seed or saplings; needs well-drained soil, full sun, and tolerates drought once established.",
+    "growing_method_ar": "تُكاثَر من البذور أو الشتلات، وتحتاج إلى تربة جيدة الصرف وشمس كاملة، وهي متحمِّلة للجفاف بعد رسوخها.",
+    "care": "Low-maintenance once mature; occasional watering during extended drought; minimal pruning needed.",
+    "care_ar": "قليلة الاحتياجات بعد نضجها، مع ريّ عرضي خلال فترات الجفاف الطويلة، وتقليم بسيط عند الحاجة.",
+    "common_pests": [
+      "Generally very pest-resistant (used itself as a natural pesticide)"
+    ],
+    "common_pests_ar": [
+      "مقاومة جدًا للآفات بشكل عام، بل تُستخدم هي نفسها كمبيد طبيعي"
+    ],
+    "geographic_distribution": "Native to the Indian subcontinent; cultivated across South Asia, Africa, and other tropical regions.",
+    "geographic_distribution_ar": "موطنها الأصلي شبه القارة الهندية، وتُزرع في جنوب آسيا وأفريقيا ومناطق استوائية أخرى.",
+    "safe_dosage": "No safe home dose established — this plant is not for self-medication. Consult a qualified herbalist or physician.",
+    "safe_dosage_ar": "لا توجد جرعة منزلية آمنة موثّقة لهذا النبات، وهو غير مخصَّص للعلاج الذاتي. يجب استشارة معالج أعشاب مؤهَّل أو طبيب.",
+    "description_ar": "شجرة سريعة النمو دائمة الخضرة، ذات أوراق ريشية وأزهار بيضاء صغيرة، موطنها الأصلي شبه القارة الهندية.",
+    "uses_ar": [
+      "تُستخدم الأوراق واللحاء تقليديًا لعلاج الحالات الجلدية، وكعامل مضاد للبكتيريا والفطريات",
+      "يُستخدم على نطاق واسع كمبيد حشري طبيعي (زيت النيم)",
+      "استُخدمت أغصانها تقليديًا كفرشاة أسنان طبيعية لدعم نظافة الأسنان واللثة"
+    ],
+    "warnings_ar": "قد يكون زيت أو مستخلص بذور النيم سامًّا إذا ابتُلع، خصوصًا لدى الرضّع والأطفال الصغار، وقد تسبَّب في حالات تسمم خطيرة موثَّقة. غير مخصَّص للاستخدام الداخلي دون إشراف طبي.",
+    "toxicity_level": "dangerous",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/نيم_شائع"
+    ],
+    "family_ar": "الميلياسية",
+    "habitat_ar": "موطنها الأصلي شبه القارة الهندية، وتُزرع في جنوب آسيا وأفريقيا ومناطق استوائية أخرى.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Azadirachta_indica,_leaves_%26_fruits.JPG",
+    "image_credit": "Wikimedia Commons contributors, CC BY-SA 3.0"
+  },
+  "oleander": {
+    "arabic_name": "دفلة",
+    "english_name": "Oleander",
+    "scientific_name": "Nerium oleander",
+    "family": "Apocynaceae",
+    "description": "A large evergreen shrub with narrow, leathery leaves and clusters of showy pink, white, or red flowers — a very common but highly toxic ornamental.",
+    "active_compounds": [
+      "Oleandrin (cardiac glycoside)"
+    ],
+    "medicinal": false,
+    "poisonous": true,
+    "uses": [],
+    "warnings": "Highly toxic — every part of the plant contains cardiac glycosides. Ingestion can cause severe heart problems and is potentially fatal. Do not use for any home remedy.",
+    "habitat": "Mediterranean region, widely planted as an ornamental worldwide",
+    "image": "images/oleander.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Nerium%20oleander",
+      "https://medlineplus.gov/"
+    ],
+    "growing_method": "Propagated from stem cuttings; extremely easy to grow in almost any well-drained soil in full sun — not recommended for home gardens due to toxicity.",
+    "growing_method_ar": "تُكاثَر من العُقَل الساقية، وهي سهلة النمو للغاية في أي تربة جيدة الصرف تقريبًا تحت شمس كاملة، ولكنها غير مستحسنة للحدائق المنزلية بسبب سمِّيتها.",
+    "care": "If already present in a landscape, wear gloves when pruning and keep clippings away from children, pets, and livestock; never burn the plant (toxic smoke).",
+    "care_ar": "في حال وجودها بالفعل ضمن منظر طبيعي، يجب ارتداء قفازات عند التقليم وإبعاد القصاصات عن الأطفال والحيوانات الأليفة والماشية، وعدم حرقها إطلاقًا لأن دخانها سام.",
+    "common_pests": [
+      "Oleander caterpillar",
+      "Aphids",
+      "Scale insects"
+    ],
+    "common_pests_ar": [
+      "يرقة الدفلة",
+      "المنّ",
+      "الحشرات القشرية"
+    ],
+    "geographic_distribution": "Mediterranean region; widely planted as an ornamental worldwide in warm climates.",
+    "geographic_distribution_ar": "موطنها الأصلي منطقة البحر المتوسط، وتُزرع على نطاق واسع كنبتة زينة حول العالم في المناخات الدافئة.",
+    "safe_dosage": "No safe home dose established — this plant is not for self-medication. Consult a qualified herbalist or physician.",
+    "safe_dosage_ar": "لا توجد جرعة منزلية آمنة موثّقة لهذا النبات، وهو غير مخصَّص للعلاج الذاتي. يجب استشارة معالج أعشاب مؤهَّل أو طبيب.",
+    "description_ar": "شجيرة كبيرة دائمة الخضرة ذات أوراق ضيقة جلدية وعناقيد أزهار لافتة وردية أو بيضاء أو حمراء اللون؛ وهي من نباتات الزينة الشائعة جدًا رغم سُمِّيتها الشديدة.",
+    "uses_ar": [],
+    "warnings_ar": "سام جدًّا؛ إذ يحتوي كل جزء من النبات على غليكوسيدات قلبية. قد يُسبِّب ابتلاعه مشكلات قلبية خطيرة، وقد يكون قاتلًا. يُمنع استخدامه إطلاقًا كعلاج منزلي.",
+    "toxicity_level": "highly_toxic",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/دفلى"
+    ],
+    "family_ar": "الدفلية",
+    "habitat_ar": "موطنها الأصلي منطقة البحر المتوسط، وتُزرع على نطاق واسع كنبتة زينة حول العالم في المناخات الدافئة.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nerium_oleander_flowers_leaves.jpg",
+    "image_credit": "Alvesgaspar, Wikimedia Commons, CC BY-SA"
+  },
+  "pathorkuchi": {
+    "arabic_name": "",
+    "english_name": "Pathor Kuchi / Life Plant",
+    "scientific_name": "Kalanchoe pinnata",
+    "family": "Crassulaceae",
+    "description": "A fleshy-leaved succulent that produces tiny plantlets along its leaf edges, native to Madagascar and naturalized across the tropics.",
+    "active_compounds": [
+      "Bufadienolides (e.g. bryophyllin)"
+    ],
+    "medicinal": true,
+    "poisonous": true,
+    "uses": [
+      "Traditionally used topically for minor wounds, insect bites, and skin inflammation",
+      "Used in some folk remedies for kidney stones and coughs",
+      "Leaf juice traditionally used in some cultures to help soothe minor digestive discomfort"
+    ],
+    "warnings": "Contains bufadienolide compounds that can be toxic in large/concentrated doses, particularly to animals; use with caution and avoid large oral doses.",
+    "habitat": "Native to Madagascar; naturalized across the tropics, including South Asia",
+    "image": "images/pathorkuchi.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Kalanchoe%20pinnata",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10294007/"
+    ],
+    "growing_method": "Propagates effortlessly from leaf or stem cuttings, even from a leaf simply resting on soil (plantlets form on leaf margins); needs well-draining soil.",
+    "growing_method_ar": "تتكاثر بسهولة بالغة من عُقَل الأوراق أو السيقان، بل حتى من ورقة موضوعة على سطح التربة فحسب، إذ تتكوَّن نبيتات صغيرة على حواف الورقة؛ وتحتاج إلى تربة جيدة الصرف.",
+    "care": "Drought-tolerant succulent; avoid overwatering; responds poorly to high-nitrogen fertilizer (causes weak, pest-prone growth) — best left unfertilized or fed lightly.",
+    "care_ar": "نبات عصاري متحمِّل للجفاف؛ يجب تجنُّب الريّ الزائد، وهو يستجيب سلبًا للسماد الغني بالنيتروجين الذي يُسبِّب نموًا ضعيفًا عرضة للآفات، لذا يُفضَّل تركه دون تسميد أو تسميده بشكل خفيف.",
+    "common_pests": [
+      "Mealybugs",
+      "Scale",
+      "Powdery mildew and botrytis from overhead watering"
+    ],
+    "common_pests_ar": [
+      "البقّ الدقيقي",
+      "الحشرات القشرية",
+      "البياض الدقيقي والعفن الرمادي نتيجة الريّ من الأعلى"
+    ],
+    "geographic_distribution": "Native to Madagascar; naturalized across the tropics, including South and Southeast Asia.",
+    "geographic_distribution_ar": "موطنه الأصلي مدغشقر، وقد تجنَّس في مختلف المناطق الاستوائية، بما في ذلك جنوب وجنوب شرق آسيا.",
+    "safe_dosage": "No safe home dose established — this plant is not for self-medication. Consult a qualified herbalist or physician.",
+    "safe_dosage_ar": "لا توجد جرعة منزلية آمنة موثّقة لهذا النبات، وهو غير مخصَّص للعلاج الذاتي. يجب استشارة معالج أعشاب مؤهَّل أو طبيب.",
+    "description_ar": "نبات عصاري ذو أوراق لحمية، ينتج نبيتات صغيرة على حواف أوراقه، موطنه الأصلي مدغشقر، وقد تجنَّس في مختلف المناطق الاستوائية.",
+    "uses_ar": [
+      "يُستخدم تقليديًا موضعيًا لعلاج الجروح البسيطة ولدغات الحشرات والتهاب الجلد",
+      "يُستخدم في بعض العلاجات الشعبية لحصى الكلى والسعال",
+      "يُستخدم عصير أوراقها تقليديًا في بعض الثقافات للمساعدة على تهدئة اضطراب الهضم البسيط"
+    ],
+    "warnings_ar": "يحتوي على مركَّبات بوفادينوليدية قد تكون سامة بجرعات كبيرة أو مركَّزة، خصوصًا للحيوانات؛ يجب استخدامه بحذر وتجنُّب الجرعات الفموية الكبيرة.",
+    "toxicity_level": "low_toxic",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/كالانشو_بيناتا"
+    ],
+    "habitat_ar": "موطنه الأصلي مدغشقر، وقد تجنَّس في مختلف المناطق الاستوائية، بما في ذلك جنوب وجنوب شرق آسيا.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pinnata.JPG",
+    "image_credit": "Wikimedia Commons contributors, CC BY-SA 4.0"
+  },
+  "phyllanthus": {
+    "arabic_name": "أملج",
+    "english_name": "Amla / Indian Gooseberry",
+    "scientific_name": "Phyllanthus emblica",
+    "family": "Phyllanthaceae",
+    "description": "A small to medium deciduous tree with feathery leaves and light green flowers, bearing small, sour, pale-green fruit — one of the richest natural sources of vitamin C.",
+    "active_compounds": [
+      "Vitamin C (ascorbic acid)",
+      "Gallic acid",
+      "Ellagic acid",
+      "Emblicanin A & B"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Fruit is one of the three components of the classical Ayurvedic formula Triphala (together with 'bohera' and 'haritoki' in this same dataset)",
+      "Traditionally used to support digestion, immunity, and hair health",
+      "Studied for antioxidant, anti-inflammatory, and hepatoprotective effects"
+    ],
+    "warnings": "Generally well tolerated as food; very high supplement doses may cause stomach upset. Consult a doctor before medicinal-dose use if on medication.",
+    "habitat": "Native to South and Southeast Asia; widely cultivated in India, Sri Lanka, and Bangladesh",
+    "image": "images/phyllanthus.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Phyllanthus%20emblica",
+      "https://www.sciencedirect.com/topics/medicine-and-dentistry/phyllanthus-emblica",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10505619/"
+    ],
+    "note": "Corrected from an earlier version of this file, which mistakenly used Phyllanthus niruri (a different plant, 'stonebreaker'). The source dataset (BDMediLeaves, ScienceDirect) confirms this class is Phyllanthus emblica.",
+    "growing_method": "Propagated from seed, ring budding, or veneer grafting; grows in a wide range of soils except pure sand; drought and fire-tolerant once established.",
+    "growing_method_ar": "تُكاثَر من البذور أو التبرعم الحلقي أو التطعيم القشري، وتنمو في أنواع متعددة من التربة باستثناء الرملية الصرفة، وهي متحمِّلة للجفاف والحرائق بعد رسوخها.",
+    "care": "Needs regular watering especially in dry season; benefits from annual pruning after fruiting season; fertilize with a balanced NPK formula.",
+    "care_ar": "تحتاج إلى ريّ منتظم، خصوصًا في الموسم الجاف، وتستفيد من تقليم سنوي بعد موسم الإثمار، وتُسمَّد بسماد متوازن من نوع NPK.",
+    "common_pests": [
+      "Generally hardy",
+      "Susceptible to pests and diseases if stressed — regular monitoring recommended"
+    ],
+    "common_pests_ar": [
+      "قوية بشكل عام",
+      "قد تصبح عرضة للآفات والأمراض إذا تعرَّضت للإجهاد، لذا يُنصح بالمراقبة المنتظمة"
+    ],
+    "geographic_distribution": "Tropical South and Southeast Asia, cultivated widely in India (Uttar Pradesh, Gujarat, Maharashtra and elsewhere).",
+    "geographic_distribution_ar": "جنوب وجنوب شرق آسيا الاستوائية، وتُزرع على نطاق واسع في الهند (أوتار براديش وغوجارات وماهاراشترا وغيرها).",
+    "safe_dosage": "Commonly eaten as fresh fruit or juice as part of normal diet; no established medicinal supplement dose. Consult a professional for concentrated extracts.",
+    "safe_dosage_ar": "تُؤكل عادةً كفاكهة طازجة أو عصير ضمن النظام الغذائي المعتاد، ولا توجد جرعة مكمِّل طبي محدَّدة. يُنصح باستشارة مختص بالنسبة للمستخلصات المركَّزة.",
+    "description_ar": "شجرة صغيرة إلى متوسطة الحجم نفضية، ذات أوراق ريشية وأزهار خضراء فاتحة، تحمل ثمارًا صغيرة حامضة شاحبة الخضرة، وتُعدّ من أغنى المصادر الطبيعية بفيتامين C.",
+    "uses_ar": [
+      "تُعدّ الثمرة أحد المكوِّنات الثلاثة لتركيبة Triphala الأيورفيدية الكلاسيكية، إلى جانب 'بوهيرا' و'هاريتوكي' في هذه المجموعة نفسها",
+      "تُستخدم تقليديًا لدعم الهضم والمناعة وصحة الشعر",
+      "خضعت للدراسة بحثًا عن تأثيراتها المضادة للأكسدة والالتهاب والحامية للكبد"
+    ],
+    "warnings_ar": "جيدة التحمُّل بشكل عام كغذاء؛ وقد تُسبِّب الجرعات العالية جدًا كمكمِّل غذائي اضطرابًا معديًا. يُنصح باستشارة طبيب قبل استخدام الجرعة الطبية في حال تناول أدوية أخرى.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/أملج_شائع"
+    ],
+    "habitat_ar": "جنوب وجنوب شرق آسيا الاستوائية، وتُزرع على نطاق واسع في الهند (أوتار براديش وغوجارات وماهاراشترا وغيرها).",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phyllanthus_officinalis.jpg",
+    "image_credit": "Wikimedia Commons contributors, CC BY 2.5"
+  },
+  "rosemary": {
+    "arabic_name": "إكليل الجبل",
+    "english_name": "Rosemary",
+    "scientific_name": "Salvia rosmarinus",
+    "family": "Lamiaceae",
+    "description": "An aromatic evergreen shrub native to the Mediterranean region, with narrow needle-like leaves and small blue flowers.",
+    "active_compounds": [
+      "Rosmarinic acid",
+      "Carnosic acid",
+      "Carnosol"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Widely used culinary herb",
+      "Traditionally used to support digestion and as a mild antioxidant",
+      "Long associated in folk tradition with supporting memory and mental clarity, a use now being explored in modern research"
+    ],
+    "warnings": "Concentrated rosemary oil should not be taken orally in large amounts, especially during pregnancy.",
+    "habitat": "Native to the Mediterranean region",
+    "image": "images/rosemary.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Salvia%20rosmarinus",
+      "https://www.nccih.nih.gov/"
+    ],
+    "growing_method": "Propagated from stem cuttings or seed; needs well-drained, slightly alkaline soil and full sun.",
+    "growing_method_ar": "تُكاثَر من العُقَل الساقية أو البذور، وتحتاج إلى تربة جيدة الصرف خفيفة القلوية وشمس كاملة.",
+    "care": "Drought-tolerant once established; water sparingly; light pruning after flowering encourages bushier growth.",
+    "care_ar": "متحمِّلة للجفاف بعد رسوخها؛ تُروى باعتدال قليل، ويشجِّع التقليم الخفيف بعد التزهير على نمو أكثف.",
+    "common_pests": [
+      "Spider mites",
+      "Powdery mildew in humid, poorly ventilated conditions"
+    ],
+    "common_pests_ar": [
+      "العناكب الحمراء",
+      "البياض الدقيقي في الأجواء الرطبة قليلة التهوية"
+    ],
+    "geographic_distribution": "Native to the Mediterranean region; cultivated worldwide as a culinary herb.",
+    "geographic_distribution_ar": "موطنها الأصلي منطقة البحر المتوسط، وتُزرع حول العالم كعشبة طهي.",
+    "safe_dosage": "Commonly used as a culinary herb, or 1-2 g dried leaf per cup of tea, up to 2-3 cups daily.",
+    "safe_dosage_ar": "تُستخدم عادةً كعشبة طهي، أو بمقدار 1-2 غرام من الأوراق المجففة لكل كوب شاي، وحتى كوبين أو ثلاثة أكواب يوميًا.",
+    "description_ar": "شجيرة عطرية دائمة الخضرة، موطنها الأصلي منطقة البحر المتوسط، ذات أوراق ضيقة إبرية الشكل وأزهار زرقاء صغيرة.",
+    "uses_ar": [
+      "عشبة طهي مستخدمة على نطاق واسع",
+      "تُستخدم تقليديًا لدعم الهضم، وكمضاد أكسدة خفيف",
+      "ارتبطت طويلًا بالتراث الشعبي بدعم الذاكرة والوضوح الذهني، وهو استخدام تستكشفه الأبحاث الحديثة حاليًا"
+    ],
+    "warnings_ar": "لا يُؤخذ زيت الروزماري المركَّز عن طريق الفم بكميات كبيرة، خصوصًا أثناء الحمل.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/إكليل_الجبل_(نبات)"
+    ],
+    "family_ar": "الشفوية",
+    "habitat_ar": "موطنها الأصلي منطقة البحر المتوسط، وتُزرع حول العالم كعشبة طهي.",
+    "recipes": [
+      {
+        "title": "Rosemary Tea",
+        "title_ar": "شاي إكليل الجبل",
+        "ingredients": [
+          "1-2 g dried rosemary (or a small fresh sprig)",
+          "1 cup boiling water"
+        ],
+        "ingredients_ar": [
+          "1-2 غرام إكليل الجبل المجفف (أو غصن طازج صغير)",
+          "كوب ماء مغلي"
+        ],
+        "steps": [
+          "Boil a cup of water.",
+          "Add the rosemary.",
+          "Cover and steep for 5-7 minutes.",
+          "Strain and serve warm."
+        ],
+        "steps_ar": [
+          "اغلي كوب ماء.",
+          "أضيفي إكليل الجبل.",
+          "غطي واتركيه منقوعاً 5-7 دقائق.",
+          "صفّي المشروب وقدّميه دافئاً."
+        ],
+        "benefits": [
+          "Traditionally used to support digestion",
+          "Mild antioxidant"
+        ],
+        "benefits_ar": [
+          "يستخدم تقليدياً لدعم الهضم",
+          "مضاد أكسدة خفيف"
+        ]
+      }
+    ],
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rosmarinus_officinalis_0001.JPG",
+    "image_credit": "H. Zell, Wikimedia Commons, CC BY-SA 3.0"
+  },
+  "sage": {
+    "arabic_name": "مريمية",
+    "english_name": "Sage",
+    "scientific_name": "Salvia officinalis",
+    "family": "Lamiaceae",
+    "description": "A shrubby perennial herb with soft, grey-green, textured leaves and a strong, savory aroma, native to the Mediterranean.",
+    "active_compounds": [
+      "Thujone",
+      "Rosmarinic acid",
+      "Camphor"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Traditionally used as a tea for sore throats and mild digestive complaints",
+      "Studied for possible mild cognitive benefits",
+      "Also traditionally used as a gargle for mouth and throat irritation, and historically to help reduce excessive sweating"
+    ],
+    "warnings": "Contains thujone; large amounts or prolonged use (especially of the essential oil) are not recommended, particularly during pregnancy or breastfeeding.",
+    "habitat": "Native to the Mediterranean region",
+    "image": "images/sage.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Salvia%20officinalis",
+      "https://www.nccih.nih.gov/"
+    ],
+    "growing_method": "Grown from seed, cuttings, or division; prefers well-drained, slightly sandy soil and full sun.",
+    "growing_method_ar": "تُزرع من البذور أو العُقَل أو التقسيم، وتُفضِّل تربة رملية خفيفة جيدة الصرف وشمس كاملة.",
+    "care": "Water moderately, allowing soil to dry between waterings; prune in spring to prevent legginess and encourage new growth.",
+    "care_ar": "تُروى باعتدال، مع ترك التربة تجفّ بين كل ريّ وآخر، وتُقلَّم في الربيع لمنع تطاولها وتشجيع نموها الجديد.",
+    "common_pests": [
+      "Spider mites",
+      "Whiteflies",
+      "Powdery mildew"
+    ],
+    "common_pests_ar": [
+      "العناكب الحمراء",
+      "الذبابة البيضاء",
+      "البياض الدقيقي"
+    ],
+    "geographic_distribution": "Native to the Mediterranean region; cultivated worldwide as a culinary and medicinal herb.",
+    "geographic_distribution_ar": "موطنها الأصلي منطقة البحر المتوسط، وتُزرع حول العالم كعشبة طهي وطبية.",
+    "safe_dosage": "Commonly used as 1-2 g dried leaf per cup of tea, up to 2-3 cups daily; avoid prolonged high-dose use.",
+    "safe_dosage_ar": "تُستخدم عادةً بمقدار 1-2 غرام من الأوراق المجففة لكل كوب شاي، وحتى كوبين أو ثلاثة أكواب يوميًا؛ مع تجنُّب الاستخدام المطوَّل بجرعات عالية.",
+    "description_ar": "عشبة معمِّرة شجيرية ذات أوراق ناعمة رمادية مخضرَّة ذات ملمس مميَّز ورائحة قوية، موطنها الأصلي منطقة البحر المتوسط.",
+    "uses_ar": [
+      "تُستخدم تقليديًا على شكل شاي لعلاج التهاب الحلق ومشكلات الهضم الخفيفة",
+      "خضعت للدراسة بحثًا عن فوائد إدراكية خفيفة محتملة",
+      "تُستخدم أيضًا تقليديًا كغرغرة لتهيّج الفم والحلق، واستُخدمت تاريخيًا للمساعدة على تقليل التعرّق الزائد"
+    ],
+    "warnings_ar": "تحتوي على مادة الثوجون؛ ولا يُنصح باستخدام كميات كبيرة أو الاستخدام المطوَّل، خصوصًا للزيت العطري، لا سيما أثناء الحمل أو الرضاعة.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/مريمية"
+    ],
+    "family_ar": "الشفوية",
+    "habitat_ar": "موطنها الأصلي منطقة البحر المتوسط، وتُزرع حول العالم كعشبة طهي وطبية.",
+    "recipes": [
+      {
+        "title": "Sage Tea",
+        "title_ar": "شاي المريمية",
+        "ingredients": [
+          "1-2 g dried sage leaf",
+          "1 cup boiling water",
+          "Honey and lemon to taste (optional)"
+        ],
+        "ingredients_ar": [
+          "1-2 غرام أوراق مريمية مجففة",
+          "كوب ماء مغلي",
+          "عسل وليمون حسب الرغبة (اختياري)"
+        ],
+        "steps": [
+          "Boil a cup of water.",
+          "Add the sage leaves.",
+          "Cover and steep for 5-7 minutes.",
+          "Strain and serve warm.",
+          "Avoid prolonged, high-dose use."
+        ],
+        "steps_ar": [
+          "اغلي كوب ماء.",
+          "أضيفي أوراق المريمية.",
+          "غطي واتركيه منقوعاً 5-7 دقائق.",
+          "صفّي المشروب وقدّميه دافئاً.",
+          "تجنّبي الاستخدام المكثف أو طويل الأمد."
+        ],
+        "benefits": [
+          "Traditionally used for sore throats and mild digestive complaints"
+        ],
+        "benefits_ar": [
+          "استخدام تقليدي لالتهاب الحلق ومشاكل الهضم الخفيفة"
+        ]
+      }
+    ],
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salvia_officinalis_001.JPG",
+    "image_credit": "H. Zell, Wikimedia Commons, CC BY-SA 3.0"
+  },
+  "terminalia_arjuna": {
+    "arabic_name": "",
+    "english_name": "Arjuna",
+    "scientific_name": "Terminalia arjuna",
+    "family": "Combretaceae",
+    "description": "A large evergreen tree with a smooth grey bark and long leaves, typically growing along riverbanks in the Indian subcontinent.",
+    "active_compounds": [
+      "Arjunolic acid",
+      "Arjunetin",
+      "Tannins"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Bark traditionally used in Ayurvedic medicine to support heart health",
+      "Studied in small clinical trials for possible cardioprotective effects",
+      "Also referenced in traditional Ayurvedic texts as part of formulas meant to balance the body's three doshas"
+    ],
+    "warnings": "Should not replace prescribed heart medication; consult a doctor, particularly if already taking cardiac drugs.",
+    "habitat": "Indian subcontinent, along riverbanks",
+    "image": "images/terminalia_arjuna.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Terminalia%20arjuna",
+      "https://pubmed.ncbi.nlm.nih.gov/"
+    ],
+    "growing_method": "Propagated from seed; grows well in fertile, neutral-pH, moist alluvial loam soil, typically along riverbanks.",
+    "growing_method_ar": "تُكاثَر من البذور، وتنمو جيدًا في تربة غرينية خصبة رطبة متعادلة الحموضة، عادةً على ضفاف الأنهار.",
+    "care": "Needs consistent moisture and full sun; established trees are low-maintenance; occasional pruning to shape and remove dead wood.",
+    "care_ar": "تحتاج إلى رطوبة مستمرة وشمس كاملة، والأشجار الراسخة قليلة الاحتياجات، مع تقليم عرضي للتشكيل وإزالة الأخشاب الميتة.",
+    "common_pests": [
+      "Seed predation by birds/parakeets",
+      "Generally hardy against major pests"
+    ],
+    "common_pests_ar": [
+      "افتراس الطيور والببغاوات لبذورها",
+      "قوية بشكل عام ضد الآفات الرئيسية"
+    ],
+    "geographic_distribution": "Indian subcontinent, especially along riverbanks and streams; also found in Sri Lanka, Myanmar, and Bangladesh.",
+    "geographic_distribution_ar": "شبه القارة الهندية، خصوصًا على ضفاف الأنهار والجداول، وتوجد أيضًا في سريلانكا وميانمار وبنغلاديش.",
+    "safe_dosage": "No established over-the-counter dosage — traditionally prepared as a bark decoction under practitioner guidance. Consult a professional, especially if on heart medication.",
+    "safe_dosage_ar": "لا توجد جرعة تجارية موثَّقة؛ إذ يُحضَّر لحاؤها تقليديًا على شكل منقوع بإشراف مختص. يُنصح باستشارة مختص، خصوصًا في حال تناول أدوية قلبية.",
+    "description_ar": "شجرة كبيرة دائمة الخضرة، ذات لحاء رمادي أملس وأوراق طويلة، تنمو عادةً على ضفاف الأنهار في شبه القارة الهندية.",
+    "uses_ar": [
+      "يُستخدم اللحاء تقليديًا في الطب الأيورفيدي لدعم صحة القلب",
+      "خضعت لدراسة في تجارب سريرية صغيرة بحثًا عن تأثيرات محتمَلة واقية للقلب",
+      "وردت أيضًا في النصوص الأيورفيدية التقليدية ضمن تركيبات تهدف لموازنة \"الدوشا\" الثلاث بالجسم"
+    ],
+    "warnings_ar": "لا ينبغي أن تحلّ محل أدوية القلب الموصوفة طبيًا؛ يُنصح باستشارة طبيب، خصوصًا في حال تناول أدوية قلبية بالفعل.",
+    "toxicity_level": "safe",
+    "reference_ar": [],
+    "family_ar": "الرمرامية",
+    "habitat_ar": "شبه القارة الهندية، خصوصًا على ضفاف الأنهار والجداول، وتوجد أيضًا في سريلانكا وميانمار وبنغلاديش.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Terminalia_arjuna_-_Bagh-e-Jinnah.jpg",
+    "image_credit": "Wikimedia Commons contributors"
+  },
+  "thankuni": {
+    "arabic_name": "",
+    "english_name": "Thankuni / Gotu Kola",
+    "scientific_name": "Centella asiatica",
+    "family": "Apiaceae",
+    "description": "A small creeping herb with round, fan-shaped leaves; the same species commonly called 'Centella' — Thankuni is its Bengali name.",
+    "active_compounds": [
+      "Asiaticoside",
+      "Madecassoside",
+      "Asiatic acid"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Traditionally used topically to support wound healing",
+      "Used in traditional Bengali medicine for digestive complaints",
+      "In Bengali traditional medicine, also used as a mild tonic believed to support memory and mental clarity in children"
+    ],
+    "warnings": "May cause skin irritation in some people when applied topically; ask a doctor before use if pregnant or on medication.",
+    "habitat": "Wetlands of tropical Asia",
+    "image": "images/thankuni.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Centella%20asiatica",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10294007/"
+    ],
+    "note": "Same species as 'centella' in this dataset — Thankuni is the Bengali common name, Centella asiatica is the scientific/English name. In the app, show the user this equivalence rather than treating them as two different plants.",
+    "growing_method": "Propagated from runners/stolons or division; grows as a low creeping groundcover in consistently moist soil.",
+    "growing_method_ar": "تُكاثَر من السيقان الزاحفة أو بالتقسيم، وتنمو كغطاء أرضي منخفض في تربة رطبة باستمرار.",
+    "care": "Keep soil moist and warm; trim regularly to control spread; harvest outer leaves, leaving inner ones to keep growing.",
+    "care_ar": "يجب إبقاء التربة رطبة ودافئة، مع التقليم المنتظم للتحكُّم في انتشارها، وحصاد الأوراق الخارجية وترك الداخلية لمواصلة النمو.",
+    "common_pests": [
+      "Slugs and snails",
+      "Fungal leaf diseases in overly wet conditions"
+    ],
+    "common_pests_ar": [
+      "البزّاقات والحلزون",
+      "أمراض فطرية في الأوراق في الأجواء الرطبة الزائدة"
+    ],
+    "geographic_distribution": "Wetlands of tropical Asia, particularly common across Bangladesh and eastern India.",
+    "geographic_distribution_ar": "الأراضي الرطبة في آسيا الاستوائية، وتنتشر بشكل خاص في بنغلاديش وشرق الهند.",
+    "safe_dosage": "No established over-the-counter dosage for internal use; commonly applied topically. Consult a professional for internal use.",
+    "safe_dosage_ar": "لا توجد جرعة تجارية موثَّقة للاستخدام الداخلي؛ إذ تُستخدم عادةً موضعيًا. يُنصح باستشارة مختص للاستخدام الداخلي.",
+    "description_ar": "عشبة زاحفة صغيرة ذات أوراق دائرية على شكل مروحة؛ وهي النوع نفسه المعروف باسم 'سنتيلا'، وثانكوني هو اسمها البنغالي.",
+    "uses_ar": [
+      "تُستخدم تقليديًا موضعيًا لدعم التئام الجروح",
+      "تُستخدم في الطب البنغالي التقليدي لعلاج مشكلات الهضم",
+      "في الطب البنغالي التقليدي، تُستخدم أيضًا كمقوٍّ خفيف يُعتقد أنه يدعم الذاكرة والوضوح الذهني لدى الأطفال"
+    ],
+    "warnings_ar": "قد تُسبِّب تهيّجًا جلديًا لدى بعض الأشخاص عند استخدامها موضعيًا؛ يُنصح باستشارة طبيب قبل الاستخدام في حالة الحمل أو تناول أدوية أخرى.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/كينتيللا_أسياتيكا"
+    ],
+    "family_ar": "الخيمية",
+    "habitat_ar": "الأراضي الرطبة في آسيا الاستوائية، وتنتشر بشكل خاص في بنغلاديش وشرق الهند.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pegaga_(Centella_asiatica).jpg",
+    "image_credit": "Wikimedia Commons contributors, CC BY-SA 4.0"
+  },
+  "tulsi": {
+    "arabic_name": "الريحان المقدس",
+    "english_name": "Tulsi / Holy Basil",
+    "scientific_name": "Ocimum tenuiflorum",
+    "family": "Lamiaceae",
+    "description": "An upright, branching aromatic shrub, 30–60 cm tall, with hairy stems and green or purple-tinged leaves, considered sacred in Hinduism.",
+    "active_compounds": [
+      "Eugenol",
+      "Ursolic acid"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Widely used in Ayurvedic medicine as an adaptogen (stress support)",
+      "Traditionally used for coughs, colds, and respiratory complaints",
+      "Leaves are also chewed in some traditional practices to help freshen breath and support oral health"
+    ],
+    "warnings": "May affect blood sugar or blood clotting; consult a doctor before use if on related medication or before surgery.",
+    "habitat": "Indian subcontinent, cultivated across South and Southeast Asia",
+    "image": "images/tulsi.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Ocimum%20tenuiflorum",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10294007/"
+    ],
+    "growing_method": "Easily grown from seed or cuttings; prefers well-drained soil, partial shade to full sun, and regular watering.",
+    "growing_method_ar": "تُزرع بسهولة من البذور أو العُقَل، وتُفضِّل تربة جيدة الصرف وظلًا جزئيًا إلى شمس كاملة، وريًّا منتظمًا.",
+    "care": "Pinch off flower buds regularly to encourage leafier growth; water when topsoil feels dry; protect from frost.",
+    "care_ar": "يُنصح بإزالة براعم الأزهار بانتظام لتشجيع نمو أوراق أكثر، وتُروى عندما يجفّ سطح التربة، ويجب حمايتها من الصقيع.",
+    "common_pests": [
+      "Aphids",
+      "Whiteflies",
+      "Fungal leaf spot in overly wet soil"
+    ],
+    "common_pests_ar": [
+      "المنّ",
+      "الذبابة البيضاء",
+      "تبقُّع الأوراق الفطري في التربة الرطبة الزائدة"
+    ],
+    "geographic_distribution": "Indian subcontinent; cultivated widely across South and Southeast Asia, and grown globally as a household/sacred plant.",
+    "geographic_distribution_ar": "موطنها الأصلي شبه القارة الهندية، وتُزرع على نطاق واسع في جنوب وجنوب شرق آسيا، وتُزرع عالميًا كنبتة منزلية أو مقدَّسة.",
+    "safe_dosage": "Commonly used as 2-3 fresh leaves chewed, or 1-2 g dried leaf per cup of tea, up to 2 cups daily.",
+    "safe_dosage_ar": "تُستخدم عادةً بمضغ 2-3 أوراق طازجة، أو بمقدار 1-2 غرام من الأوراق المجففة لكل كوب شاي، وحتى كوبين يوميًا.",
+    "description_ar": "شجيرة عطرية منتصبة متفرِّعة، يتراوح ارتفاعها بين 30 و60 سم، ذات سيقان مشعرة وأوراق خضراء أو ذات صبغة أرجوانية، وتُعدّ نباتًا مقدَّسًا في الديانة الهندوسية.",
+    "uses_ar": [
+      "تُستخدم على نطاق واسع في الطب الأيورفيدي كمقاوم للتوتر (Adaptogen)",
+      "تُستخدم تقليديًا لعلاج السعال والزكام ومشكلات الجهاز التنفسي",
+      "تُمضغ الأوراق أيضًا في بعض الممارسات التقليدية للمساعدة على تنعيش النفس ودعم صحة الفم"
+    ],
+    "warnings_ar": "قد تؤثِّر في مستوى سكر الدم أو تخثُّره؛ يُنصح باستشارة طبيب قبل الاستخدام في حال تناول أدوية ذات صلة أو قبل إجراء عملية جراحية.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/حبق_رقيق_الأزهار"
+    ],
+    "family_ar": "الشفوية",
+    "habitat_ar": "موطنها الأصلي شبه القارة الهندية، وتُزرع على نطاق واسع في جنوب وجنوب شرق آسيا، وتُزرع عالميًا كنبتة منزلية أو مقدَّسة.",
+    "recipes": [
+      {
+        "title": "Tulsi (Holy Basil) Tea",
+        "title_ar": "شاي الريحان المقدس (تولسي)",
+        "ingredients": [
+          "8-10 fresh tulsi leaves (or 1 tsp dried)",
+          "1 cup boiling water",
+          "Honey to taste (optional)"
+        ],
+        "ingredients_ar": [
+          "8-10 ورقة ريحان مقدس طازجة (أو ملعقة صغيرة مجفف)",
+          "كوب ماء مغلي",
+          "عسل حسب الرغبة (اختياري)"
+        ],
+        "steps": [
+          "Boil a cup of water.",
+          "Add the tulsi leaves.",
+          "Cover and steep for 5-7 minutes.",
+          "Strain and serve warm."
+        ],
+        "steps_ar": [
+          "اغلي كوب ماء.",
+          "أضيفي أوراق الريحان المقدس.",
+          "غطي واتركيه منقوعاً 5-7 دقائق.",
+          "صفّي المشروب وقدّميه دافئاً."
+        ],
+        "benefits": [
+          "Traditionally used as an adaptogen for stress support",
+          "Traditionally used for coughs and colds"
+        ],
+        "benefits_ar": [
+          "يستخدم تقليدياً لدعم الجسم بمواجهة التوتر",
+          "دعم تقليدي للسعال ونزلات البرد"
+        ]
+      }
+    ],
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Basil_(Ocimum_tenuiflorum)_1.jpg",
+    "image_credit": "Wikimedia Commons contributors, CC BY-SA 3.0"
+  },
+  "zanjabeel_ginger": {
+    "arabic_name": "زنجبيل",
+    "english_name": "Ginger",
+    "scientific_name": "Zingiber officinale",
+    "family": "Zingiberaceae",
+    "description": "A herbaceous perennial with reed-like stems and a thick, aromatic underground rhizome (the part used as a spice/medicine).",
+    "active_compounds": [
+      "Gingerol",
+      "Shogaol"
+    ],
+    "medicinal": true,
+    "poisonous": false,
+    "uses": [
+      "Widely used to help relieve nausea, including motion sickness and pregnancy-related nausea",
+      "Traditionally used for digestive discomfort",
+      "Also traditionally used to help ease minor joint discomfort and as a warming remedy for colds"
+    ],
+    "warnings": "High doses may increase bleeding risk; consult a doctor before use if on blood thinners or before surgery.",
+    "habitat": "Native to Southeast Asia; cultivated in tropical regions worldwide",
+    "image": "images/zanjabeel_ginger.jpg",
+    "reference": [
+      "https://powo.science.kew.org/results?q=Zingiber%20officinale",
+      "https://www.nccih.nih.gov/health/ginger"
+    ],
+    "growing_method": "Propagated from rhizome pieces (\"seed ginger\") planted just below the soil surface; needs rich, well-drained soil and warm, humid conditions.",
+    "growing_method_ar": "تُكاثَر من قطع الجذمور المعروفة بـ'بذرة الزنجبيل' التي تُزرع تحت سطح التربة مباشرةً، وتحتاج إلى تربة غنية جيدة الصرف وأجواء دافئة رطبة.",
+    "care": "Keep soil consistently moist but not waterlogged; partial shade in hot climates; harvest rhizomes 8-10 months after planting.",
+    "care_ar": "يجب إبقاء التربة رطبة باستمرار دون إشباعها بالمياه، مع ظل جزئي في المناخات الحارة، وتُحصَد الجذامير بعد 8-10 أشهر من الزراعة.",
+    "common_pests": [
+      "Rhizome rot (fungal)",
+      "Shoot borers",
+      "Nematodes"
+    ],
+    "common_pests_ar": [
+      "تعفُّن الجذمور (فطري)",
+      "حفَّار البراعم",
+      "الديدان الخيطية"
+    ],
+    "geographic_distribution": "Native to Southeast Asia; cultivated throughout tropical regions worldwide, including South Asia and the Middle East.",
+    "geographic_distribution_ar": "موطنه الأصلي جنوب شرق آسيا، ويُزرع في مناطق استوائية حول العالم، بما في ذلك جنوب آسيا والشرق الأوسط.",
+    "safe_dosage": "Commonly used as 1-4 g fresh/dried root per day (e.g. a thumb-sized piece), or as tea.",
+    "safe_dosage_ar": "يُستخدم عادةً بمقدار 1-4 غرامات من الجذر الطازج أو المجفف يوميًا، بحجم قطعة تقارب حجم الإبهام تقريبًا، أو على شكل شاي.",
+    "description_ar": "نبات عشبي معمِّر ذو سيقان شبيهة بالقصب، وجذمور سميك عطري تحت سطح الأرض، وهو الجزء المستخدم كتوابل أو دواء.",
+    "uses_ar": [
+      "يُستخدم على نطاق واسع للمساعدة على تخفيف الغثيان، بما في ذلك دوار الحركة وغثيان الحمل",
+      "يُستخدم تقليديًا لعلاج عدم الراحة الهضمية",
+      "يُستخدم أيضًا تقليديًا للمساعدة على تخفيف انزعاج المفاصل البسيط، وكعلاج مُدفِّئ لنزلات البرد"
+    ],
+    "warnings_ar": "قد تزيد الجرعات العالية من خطر النزيف؛ يُنصح باستشارة طبيب قبل الاستخدام في حال تناول مميِّعات الدم أو قبل إجراء عملية جراحية.",
+    "toxicity_level": "safe",
+    "reference_ar": [
+      "https://ar.wikipedia.org/wiki/زنجبيل"
+    ],
+    "family_ar": "الزنجبيلية",
+    "habitat_ar": "موطنه الأصلي جنوب شرق آسيا، ويُزرع في مناطق استوائية حول العالم، بما في ذلك جنوب آسيا والشرق الأوسط.",
+    "recipes": [
+      {
+        "title": "Ginger Tea",
+        "title_ar": "شاي الزنجبيل",
+        "ingredients": [
+          "A thumb-sized piece of fresh ginger (or 1 tsp dried)",
+          "1 cup water",
+          "Honey or lemon to taste (optional)"
+        ],
+        "ingredients_ar": [
+          "قطعة زنجبيل طازج بحجم الإبهام تقريباً (أو ملعقة صغيرة مجفف)",
+          "كوب ماء",
+          "عسل أو ليمون حسب الرغبة (اختياري)"
+        ],
+        "steps": [
+          "Peel and thinly slice the ginger.",
+          "Add to a cup of water and boil for 5-10 minutes.",
+          "Strain.",
+          "Add honey or lemon if desired and serve warm."
+        ],
+        "steps_ar": [
+          "قشّري وقطّعي الزنجبيل لشرائح رفيعة.",
+          "ضعيه بكوب ماء واغليه لمدة 5-10 دقائق.",
+          "صفّي المشروب.",
+          "أضيفي العسل أو الليمون إذا رغبتِ وقدّميه دافئاً."
+        ],
+        "benefits": [
+          "Traditionally used to relieve nausea, including motion sickness and pregnancy-related nausea",
+          "Traditionally used for digestive discomfort"
+        ],
+        "benefits_ar": [
+          "يساعد تقليدياً على تخفيف الغثيان بما فيه دوار الحركة وغثيان الحمل",
+          "دعم تقليدي لعسر الهضم"
+        ]
+      }
+    ],
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zingiber_officinale.JPG",
+    "image_credit": "Wikimedia Commons contributors, CC BY 3.0"
+  },
+  "zenora": {
+    "arabic_name": "",
+    "english_name": "Zenora",
+    "scientific_name": null,
+    "family": "Lamiaceae (tentative, based on leaf shape only)",
+    "description": "Not confidently identified. A confirmed real class from the source dataset ('Bangladeshi Medicinal Plant Dataset' on Kaggle), but no paper that uses it gives a scientific name. Sample images from the dataset show a young seedling with ovate-lanceolate, opposite leaves, finely serrated margins, visible pinnate venation, and a purplish tinge on the stem/petioles — a leaf pattern consistent with the mint family (Lamiaceae) and visually similar to Ocimum (basil/tulsi-type) species. Since 'Tulsi' (Ocimum tenuiflorum) is already a separate class in this same dataset, Zenora is presumably a different Lamiaceae/Ocimum-type species, not the same plant — but this is a visual impression from a young seedling photo, not a confirmed identification.",
+    "active_compounds": [],
+    "medicinal": null,
+    "poisonous": null,
+    "uses": [],
+    "warnings": "Scientific identity unconfirmed — do not state medicinal or toxicity claims for this class until it is properly identified by an expert (ideally from a mature leaf/flower, not a seedling). Show the class name to the user without health claims, or route it through the app's low-confidence/unknown handling.",
+    "habitat": "",
+    "image": "images/zenora.jpg",
+    "reference": [
+      "https://www.kaggle.com/datasets/fuyadhasanbhoyan/bangladeshi-medicinal-plant-classification",
+      "https://www.researchgate.net/publication/370597573_Bangladeshi_Medicinal_Plant_Dataset",
+      "https://www.mdpi.com/2227-7390/11/16/3504"
+    ],
+    "note": "Family/genus above is a visual guess from seedling photos only, not a verified ID. To fully resolve this, get a photo of a mature plant (with flowers if possible) and check with someone who knows Bangladeshi/Bengali vernacular plant names, or a local botanist.",
+    "growing_method": "Unknown — growing requirements cannot be documented until the species is scientifically confirmed.",
+    "growing_method_ar": "غير معروفة؛ إذ لا يمكن توثيق متطلبات الزراعة إلا بعد تحديد النوع علميًا.",
+    "care": "Unknown — see note on unconfirmed scientific identity.",
+    "care_ar": "غير معروفة؛ يُرجى مراجعة الملاحظة المتعلقة بعدم تأكُّد الهوية العلمية.",
+    "common_pests": [
+      "Unknown"
+    ],
+    "common_pests_ar": [
+      "غير معروفة"
+    ],
+    "geographic_distribution": "Likely Bangladesh (source dataset origin), but not independently confirmed.",
+    "geographic_distribution_ar": "يُرجَّح أنها بنغلاديش، بوصفها مصدر مجموعة البيانات الأصلية، لكن ذلك غير مؤكَّد بشكل مستقل.",
+    "safe_dosage": "No safe home dose established — this plant is not for self-medication. Consult a qualified herbalist or physician.",
+    "safe_dosage_ar": "لا توجد جرعة منزلية آمنة موثّقة لهذا النبات، وهو غير مخصَّص للعلاج الذاتي. يجب استشارة معالج أعشاب مؤهَّل أو طبيب.",
+    "description_ar": "لم يُحدَّد بثقة كافية. صنف حقيقي مؤكَّد من مجموعة البيانات المصدرية ('Bangladeshi Medicinal Plant Dataset' على منصة Kaggle)، غير أن أيًّا من الأبحاث التي استخدمت هذه المجموعة لم يُورِد اسمًا علميًا له. تُظهر صور العيّنات في مجموعة البيانات شتلة صغيرة ذات أوراق بيضاوية رمحية متقابلة، وحواف مسنَّنة بدقة، وعروق ريشية واضحة، ولون أرجواني خفيف على الساق والعنق؛ وهو نمط ورقي يتوافق مع الفصيلة الشفوية (Lamiaceae) ويشبه بصريًا أنواع جنس Ocimum (كالريحان والتولسي). وبما أنّ 'التولسي' (Ocimum tenuiflorum) صنف منفصل بالفعل ضمن مجموعة البيانات نفسها، فمن المرجَّح أن يكون Zenora نوعًا مختلفًا من الفصيلة الشفوية أو جنس Ocimum، لا النبات نفسه؛ إلا أن هذا مجرد انطباع بصري مستمَدّ من صورة شتلة صغيرة، وليس تحديدًا مؤكَّدًا.",
+    "uses_ar": [],
+    "warnings_ar": "الهوية العلمية لهذا الصنف غير مؤكَّدة؛ لذا لا تُذكر أي ادِّعاءات طبية أو متعلِّقة بالسمِّية حتى تُحدَّد هويته بدقة على يد مختص. يُعرَض اسم الصنف للمستخدم دون أي ادِّعاءات صحية.",
+    "toxicity_level": "unknown",
+    "reference_ar": [],
+    "family_ar": "الشفوية (تصنيف مبدئي بناءً على شكل الورقة فقط)",
+    "habitat_ar": "يُرجَّح أنها بنغلاديش، بوصفها مصدر مجموعة البيانات الأصلية، لكن ذلك غير مؤكَّد بشكل مستقل."
+  },
+  "_combo_recipes": [
+    {
+      "plants": [
+        "Mint",
+        "zanjabeel_ginger"
+      ],
+      "title": "Mint & Ginger Tea",
+      "title_ar": "شاي النعناع والزنجبيل",
+      "ingredients": [
+        "6-8 fresh mint leaves",
+        "A few thin slices of fresh ginger",
+        "1 cup water",
+        "Honey to taste (optional)"
+      ],
+      "ingredients_ar": [
+        "6-8 ورقات نعناع طازجة",
+        "شرائح رفيعة من الزنجبيل الطازج",
+        "كوب ماء",
+        "عسل حسب الرغبة (اختياري)"
+      ],
+      "steps": [
+        "Boil the water with the ginger slices for 5 minutes.",
+        "Add the mint leaves and steep for 3 more minutes.",
+        "Strain, add honey if desired, and serve warm."
+      ],
+      "steps_ar": [
+        "اغلي الماء مع شرائح الزنجبيل لمدة 5 دقائق.",
+        "أضيفي أوراق النعناع واتركيه منقوعاً 3 دقائق إضافية.",
+        "صفّي المشروب، أضيفي العسل إذا رغبتِ، وقدّميه دافئاً."
+      ],
+      "benefits": [
+        "Combines mint's digestive-soothing effect with ginger's traditional anti-nausea use"
+      ],
+      "benefits_ar": [
+        "يجمع أثر النعناع المهدئ للهضم مع استخدام الزنجبيل التقليدي لتخفيف الغثيان"
+      ]
+    },
+    {
+      "plants": [
+        "chamomile",
+        "khuzama_lavender"
+      ],
+      "title": "Calming Chamomile & Lavender Tea",
+      "title_ar": "شاي مهدئ (بابونج وخزامى)",
+      "ingredients": [
+        "1 tsp dried chamomile flowers",
+        "1 tsp dried lavender flowers",
+        "1 cup boiling water",
+        "Honey to taste (optional)"
+      ],
+      "ingredients_ar": [
+        "ملعقة صغيرة أزهار بابونج مجففة",
+        "ملعقة صغيرة أزهار خزامى مجففة",
+        "كوب ماء مغلي",
+        "عسل حسب الرغبة (اختياري)"
+      ],
+      "steps": [
+        "Boil a cup of water.",
+        "Add both the chamomile and lavender.",
+        "Cover and steep for 7-8 minutes.",
+        "Strain, add honey if desired, and serve warm before bed."
+      ],
+      "steps_ar": [
+        "اغلي كوب ماء.",
+        "أضيفي البابونج والخزامى معاً.",
+        "غطي واتركيه منقوعاً 7-8 دقائق.",
+        "صفّي المشروب، أضيفي العسل إذا رغبتِ، وقدّميه دافئاً قبل النوم."
+      ],
+      "benefits": [
+        "Both are traditionally used for relaxation and mild anxiety relief"
+      ],
+      "benefits_ar": [
+        "كلاهما يستخدم تقليدياً للاسترخاء وتخفيف القلق الخفيف"
+      ]
+    },
+    {
+      "plants": [
+        "Lemon",
+        "zanjabeel_ginger"
+      ],
+      "title": "Lemon & Ginger Warm Drink",
+      "title_ar": "مشروب الليمون والزنجبيل الدافئ",
+      "ingredients": [
+        "Juice of half a lemon",
+        "A few thin slices of fresh ginger",
+        "1 cup water",
+        "Honey to taste (optional)"
+      ],
+      "ingredients_ar": [
+        "عصير نصف ليمونة",
+        "شرائح رفيعة من الزنجبيل الطازج",
+        "كوب ماء",
+        "عسل حسب الرغبة (اختياري)"
+      ],
+      "steps": [
+        "Boil the water with the ginger slices for 5-8 minutes.",
+        "Let cool slightly, then add the lemon juice.",
+        "Add honey if desired and serve warm."
+      ],
+      "steps_ar": [
+        "اغلي الماء مع شرائح الزنجبيل لمدة 5-8 دقائق.",
+        "اتركيه يبرد قليلاً ثم أضيفي عصير الليمون.",
+        "أضيفي العسل إذا رغبتِ وقدّميه دافئاً."
+      ],
+      "benefits": [
+        "Combines lemon's vitamin C with ginger's traditional digestive/nausea-easing use"
+      ],
+      "benefits_ar": [
+        "يجمع فيتامين سي بالليمون مع استخدام الزنجبيل التقليدي لدعم الهضم وتخفيف الغثيان"
+      ]
+    }
+  ]
+}

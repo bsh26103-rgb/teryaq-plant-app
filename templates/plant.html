@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ name }} — Scan·25</title>
+<link rel="manifest" href="/static/manifest.json">
+<link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
+<link rel="icon" href="/static/icons/favicon-32.png">
+<meta name="theme-color" content="#1B4332">
+<link rel="stylesheet" href="/static/app.css">
+<script>document.documentElement.setAttribute("data-theme", localStorage.getItem("plantai_theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));</script>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="/">
+    <span class="brand-mark"></span>
+    <span class="brand-name">Scan·25</span>
+  </a>
+  <div class="topbar-right">
+    <div class="lang-pill-row">
+      <button class="lang-pill" id="langEnBtn" onclick="setLang('en')">EN</button>
+      <button class="lang-pill" id="langArBtn" onclick="setLang('ar')">AR</button>
+    </div>
+    <span class="topbar-tag">بطاقة نبات</span>
+    <button class="theme-toggle" id="themeToggle" aria-label="تبديل المظهر"></button>
+  </div>
+</header>
+
+<div class="wrap">
+  {% if plant %}
+    <p class="common-name">{{ plant.english_name or name }}</p>
+    {% if plant.scientific_name %}<p class="sci-name">{{ plant.scientific_name }}</p>{% endif %}
+    {% if plant.family %}<span class="family-tag">{{ plant.family }}</span>{% endif %}
+
+    {% if plant.poisonous %}
+      <div class="msg-banner danger" style="margin-top:16px">
+        <span class="ar-only">⚠ هذا النبات مصنّف سام — لا يُستخدم كعلاج منزلي.</span>
+        <span class="en-only">⚠ This plant is classified as poisonous — not for home remedy use.</span>
+      </div>
+    {% elif plant.medicinal %}
+      <div class="msg-banner" style="margin-top:16px;background:var(--safe-bg);color:#155C36">
+        <span class="ar-only">نبات طبي حسب المصادر التقليدية.</span>
+        <span class="en-only">Classified as medicinal in traditional sources.</span>
+      </div>
+    {% endif %}
+
+    {% if plant.description %}
+    <p style="margin-top:20px;font-size:15px;line-height:1.65">
+      <span class="ar-only">{{ plant.description_ar or plant.description }}</span>
+      <span class="en-only">{{ plant.description }}</span>
+    </p>
+    {% endif %}
+
+    {% if plant.active_compounds %}
+    <div class="tags">
+      {% for c in plant.active_compounds %}<span class="tag">{{ c }}</span>{% endfor %}
+    </div>
+    {% endif %}
+
+    {% if plant.uses %}
+    <div class="info-card">
+      <h3><span class="ar-only">الاستخدامات التقليدية</span><span class="en-only">Traditional Uses</span></h3>
+      <ul class="ar-only">{% for u in (plant.uses_ar if plant.uses_ar else plant.uses) %}<li>{{ u }}</li>{% endfor %}</ul>
+      <ul class="en-only">{% for u in plant.uses %}<li>{{ u }}</li>{% endfor %}</ul>
+    </div>
+    {% endif %}
+
+    {% if plant.warnings %}
+    <div class="info-card warn">
+      <h3><span class="ar-only">تحذير</span><span class="en-only">Warning</span></h3>
+      <p class="ar-only">{{ plant.warnings_ar or plant.warnings }}</p>
+      <p class="en-only">{{ plant.warnings }}</p>
+    </div>
+    {% endif %}
+
+    {% if plant.habitat %}
+    <div class="info-card">
+      <h3><span class="ar-only">الموطن</span><span class="en-only">Habitat</span></h3>
+      <p>{{ plant.habitat }}</p>
+    </div>
+    {% endif %}
+
+    {% if plant.growing_method %}
+    <div class="info-card">
+      <h3><span class="ar-only">طريقة الزراعة</span><span class="en-only">Growing Method</span></h3>
+      <p class="ar-only">{{ plant.growing_method_ar or plant.growing_method }}</p>
+      <p class="en-only">{{ plant.growing_method }}</p>
+    </div>
+    {% endif %}
+
+    {% if plant.care %}
+    <div class="info-card">
+      <h3><span class="ar-only">العناية</span><span class="en-only">Care</span></h3>
+      <p class="ar-only">{{ plant.care_ar or plant.care }}</p>
+      <p class="en-only">{{ plant.care }}</p>
+    </div>
+    {% endif %}
+
+    {% if plant.common_pests %}
+    <div class="info-card">
+      <h3><span class="ar-only">الآفات/الأمراض الشائعة</span><span class="en-only">Common Pests/Diseases</span></h3>
+      <p class="ar-only">{{ (plant.common_pests_ar if plant.common_pests_ar else plant.common_pests) | join(" · ") }}</p>
+      <p class="en-only">{{ plant.common_pests | join(" · ") }}</p>
+    </div>
+    {% endif %}
+
+    {% if plant.geographic_distribution %}
+    <div class="info-card">
+      <h3><span class="ar-only">مناطق الانتشار الجغرافي</span><span class="en-only">Geographic Distribution</span></h3>
+      <p class="ar-only">{{ plant.geographic_distribution_ar or plant.geographic_distribution }}</p>
+      <p class="en-only">{{ plant.geographic_distribution }}</p>
+    </div>
+    {% endif %}
+
+    {% if plant.safe_dosage %}
+    <div class="info-card">
+      <h3><span class="ar-only">الجرعة الآمنة</span><span class="en-only">Safe Dosage</span></h3>
+      <p class="ar-only">{{ plant.safe_dosage_ar or plant.safe_dosage }}</p>
+      <p class="en-only">{{ plant.safe_dosage }}</p>
+    </div>
+    {% endif %}
+
+    {% if plant.reference %}
+    <div class="refs">
+      <span class="ar-only">المصادر:</span><span class="en-only">Sources:</span>
+      {% for r in plant.reference %}<a href="{{ r }}" target="_blank" rel="noopener">{{ r }}</a>{% if not loop.last %}، {% endif %}{% endfor %}
+    </div>
+    {% endif %}
+  {% else %}
+    <div class="empty">
+      <p><span class="ar-only">ما لقينا معلومات عن "{{ name }}".</span><span class="en-only">No information found for "{{ name }}".</span></p>
+      <a class="btn btn-primary" href="/" style="max-width:220px;margin:14px auto 0">
+        <span class="ar-only">رجوع للرئيسية</span><span class="en-only">Back to home</span>
+      </a>
+    </div>
+  {% endif %}
+</div>
+
+<button class="fab" id="chatFab" onclick="window.location.href='/#chatbot'" aria-label="المساعد الذكي">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5h14v9H8l-3 3v-3H3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+</button>
+
+<nav class="tabbar">
+  <a href="/">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 9l7-6 7 6v8a1 1 0 0 1-1 1h-3v-6H7v6H4a1 1 0 0 1-1-1V9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <span data-i18n="navHome">الرئيسية</span>
+  </a>
+  <a href="/plants-list" class="active">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 17V9M10 9C10 5.5 7 4 4 4c0 3.5 2 6 6 5zM10 9c0-3.5 3-5 6-5 0 3.5-2 6-6 5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <span data-i18n="navPlants">النباتات</span>
+  </a>
+  <a href="/history">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <span data-i18n="navHistory">السجل</span>
+  </a>
+</nav>
+
+<script src="/static/js/i18n.js"></script>
+<script src="/static/app.js"></script>
+<script>
+initTheme();
+wireThemeToggle("themeToggle");
+applyLang(currentLang);
+</script>
+
+</body>
+</html>

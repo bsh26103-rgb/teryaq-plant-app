@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>النتيجة — Scan·25</title>
+<link rel="manifest" href="/static/manifest.json">
+<link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
+<link rel="icon" href="/static/icons/favicon-32.png">
+<meta name="theme-color" content="#1B4332">
+<link rel="stylesheet" href="/static/app.css">
+<script>document.documentElement.setAttribute("data-theme", localStorage.getItem("plantai_theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));</script>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="/">
+    <span class="brand-mark"></span>
+    <span class="brand-name">Scan·25</span>
+  </a>
+  <div class="topbar-right">
+    <div class="lang-pill-row">
+      <button class="lang-pill" id="langEnBtn" onclick="setLang('en')">EN</button>
+      <button class="lang-pill" id="langArBtn" onclick="setLang('ar')">AR</button>
+    </div>
+    <span class="topbar-tag">نتيجة الفحص</span>
+    <button class="theme-toggle" id="themeToggle" aria-label="تبديل المظهر"></button>
+  </div>
+</header>
+
+<div class="wrap" id="content">
+</div>
+
+<div class="wrap empty" id="emptyState" style="display:none">
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 6l14 24H6L20 6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M20 18v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  <p data-i18n="resultEmptyText">ما في نتيجة محفوظة بعد.</p>
+  <a class="btn btn-primary" href="/" style="max-width:220px;margin:14px auto 0" data-i18n="scanFirstImage">فحص صورة</a>
+</div>
+
+<button class="fab" id="chatFab" onclick="window.location.href='/#chatbot'" aria-label="المساعد الذكي">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5h14v9H8l-3 3v-3H3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+</button>
+
+<nav class="tabbar">
+  <a href="/">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 9l7-6 7 6v8a1 1 0 0 1-1 1h-3v-6H7v6H4a1 1 0 0 1-1-1V9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <span data-i18n="navHome">الرئيسية</span>
+  </a>
+  <a href="/plants-list">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 17V9M10 9C10 5.5 7 4 4 4c0 3.5 2 6 6 5zM10 9c0-3.5 3-5 6-5 0 3.5-2 6-6 5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <span data-i18n="navPlants">النباتات</span>
+  </a>
+  <a href="/history">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <span data-i18n="navHistory">السجل</span>
+  </a>
+</nav>
+
+<script src="/static/js/i18n.js"></script>
+<script src="/static/app.js"></script>
+<script>
+initTheme();
+wireThemeToggle("themeToggle");
+applyLang(currentLang);
+
+const raw = sessionStorage.getItem(LAST_RESULT_KEY);
+const content = document.getElementById("content");
+const emptyState = document.getElementById("emptyState");
+
+function renderPage() {
+  if (!raw) {
+    emptyState.style.display = "block";
+    return;
+  }
+  const data = JSON.parse(raw);
+  const info = data.info || {};
+  const v = verdictOf(data);
+
+  const desc = (currentLang === "ar" && info.description_ar) ? info.description_ar : info.description;
+  const usesArr = (currentLang === "ar" && info.uses_ar && info.uses_ar.length) ? info.uses_ar : info.uses;
+  const warnText = (currentLang === "ar" && info.warnings_ar) ? info.warnings_ar : info.warnings;
+  const growingText = (currentLang === "ar" && info.growing_method_ar) ? info.growing_method_ar : info.growing_method;
+  const careText = (currentLang === "ar" && info.care_ar) ? info.care_ar : info.care;
+  const pestsArr = (currentLang === "ar" && info.common_pests_ar && info.common_pests_ar.length) ? info.common_pests_ar : info.common_pests;
+  const distText = (currentLang === "ar" && info.geographic_distribution_ar) ? info.geographic_distribution_ar : info.geographic_distribution;
+  const dosageText = (currentLang === "ar" && info.safe_dosage_ar) ? info.safe_dosage_ar : info.safe_dosage;
+
+  let top3Html = "";
+  (data.top3 || []).forEach(p => {
+    const displayName = (currentLang === "ar" ? p.display_ar : p.display_en) || p.name;
+    top3Html += `<div class="top3-row">
+      <span class="top3-name">${displayName}</span>
+      <span class="top3-bar-wrap"><span class="top3-bar" style="width:${p.confidence}%"></span></span>
+      <span class="top3-pct">${p.confidence}%</span>
+    </div>`;
+  });
+
+  let tagsHtml = "";
+  (info.active_compounds || []).forEach(c => { tagsHtml += `<span class="tag">${c}</span>`; });
+
+  let usesHtml = "";
+  if (usesArr && usesArr.length) {
+    usesHtml = `<div class="info-card"><h3>${t("infoUses")}</h3><ul>` +
+      usesArr.map(u => `<li>${u}</li>`).join("") + `</ul></div>`;
+  }
+
+  let warnHtml = "";
+  if (warnText) {
+    warnHtml = `<div class="info-card warn"><h3>${t("infoWarn")}</h3><p>${warnText}</p></div>`;
+  }
+
+  let growingHtml = growingText ? `<div class="info-card"><h3>${t("infoGrowing")}</h3><p>${growingText}</p></div>` : "";
+  let careHtml = careText ? `<div class="info-card"><h3>${t("infoCare")}</h3><p>${careText}</p></div>` : "";
+  let pestsHtml = (pestsArr && pestsArr.length) ? `<div class="info-card"><h3>${t("infoPests")}</h3><p>${pestsArr.join(" · ")}</p></div>` : "";
+  let distHtml = distText ? `<div class="info-card"><h3>${t("infoDistribution")}</h3><p>${distText}</p></div>` : "";
+  let dosageHtml = dosageText ? `<div class="info-card"><h3>${t("infoDosage")}</h3><p>${dosageText}</p></div>` : "";
+
+  let refsHtml = "";
+  if (info.reference && info.reference.length) {
+    refsHtml = t("sourcesLabel") + " " + info.reference.map(r => {
+      let host = r;
+      try { host = new URL(r).hostname.replace("www.", ""); } catch (e) {}
+      return `<a href="${r}" target="_blank" rel="noopener">${host}</a>`;
+    }).join("، ");
+  }
+
+  let gradcamHtml = "";
+  if (data.gradcam) {
+    gradcamHtml = `<div class="card" style="margin-top:16px">
+      <p class="panel-title">${t("gradcamTitle")}</p>
+      <div class="gradcam-grid">
+        <figure><img src="${data.image}"><figcaption>${t("gcOriginal")}</figcaption></figure>
+        <figure><img src="${data.gradcam.overlay}"><figcaption>${t("gcHeatmap")}</figcaption></figure>
+      </div>
+    </div>`;
+  }
+
+  content.innerHTML = `
+    <div class="photo-frame">
+      <img src="${data.image}">
+      <div class="ribbon ${v.cls}">${v.label}</div>
+    </div>
+    <div style="margin-top:22px">
+      <p class="common-name">${data.status === "ok" ? ((currentLang === "ar" ? info.arabic_name : info.english_name) || info.english_name || data.prediction) : t("statusUnknown")}</p>
+      <p class="sci-name">${info.scientific_name || ""}</p>
+      ${info.family ? `<span class="family-tag">${info.family}</span>` : ""}
+    </div>
+    ${data.message ? `<div class="msg-banner ${data.status === "unknown" ? "danger" : "caution"}">${data.message}</div>` : ""}
+    <div style="margin-top:22px">
+      <div class="top3-title">${t("top3Title")}</div>
+      ${top3Html}
+    </div>
+    ${gradcamHtml}
+    ${desc ? `<p style="margin-top:20px;font-size:15px;line-height:1.65">${desc}</p>` : ""}
+    <div class="tags">${tagsHtml}</div>
+    ${usesHtml}
+    ${warnHtml}
+    ${growingHtml}
+    ${careHtml}
+    ${pestsHtml}
+    ${distHtml}
+    ${dosageHtml}
+    <div class="refs">${refsHtml}</div>
+    <a class="btn btn-outline" href="/" style="margin-top:22px">${t("scanFirstImage")}</a>
+  `;
+}
+renderPage();
+window.onLangChange = renderPage;
+</script>
+
+</body>
+</html>

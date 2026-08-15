@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{% block title %}Scan·25{% endblock %} — Smart Plant Recognition</title>
+<link rel="manifest" href="/static/manifest.json">
+<link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
+<link rel="icon" href="/static/icons/favicon-32.png">
+<meta name="theme-color" content="#1B4332">
+<link rel="stylesheet" href="/static/app.css">
+<script>document.documentElement.setAttribute("data-theme", localStorage.getItem("plantai_theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));</script>
+{% block head_extra %}{% endblock %}
+</head>
+<body>
+
+{% block splash %}{% endblock %}
+
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="side-brand">
+      <span class="brand-mark"></span>
+      <div>
+        <div class="brand-name">Scan·25</div>
+        <div class="side-tagline">Smart Plant Recognition</div>
+      </div>
+    </div>
+    <nav>
+      <a href="/" class="{{ 'active' if active_page == 'home' else '' }}">
+        <span class="nav-ic ic-teal"><svg width="15" height="15" viewBox="0 0 20 20" fill="none"><path d="M3 9l7-6 7 6v8a1 1 0 0 1-1 1h-3v-6H7v6H4a1 1 0 0 1-1-1V9z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        الرئيسية
+      </a>
+      <a href="/history" class="{{ 'active' if active_page == 'history' else '' }}">
+        <span class="nav-ic ic-amber"><svg width="15" height="15" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.6"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        السجل
+      </a>
+      <a href="/plants-list" class="{{ 'active' if active_page == 'plants' else '' }}">
+        <span class="nav-ic ic-green"><svg width="15" height="15" viewBox="0 0 20 20" fill="none"><path d="M10 17V9M10 9C10 5.5 7 4 4 4c0 3.5 2 6 6 5zM10 9c0-3.5 3-5 6-5 0 3.5-2 6-6 5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        النباتات
+      </a>
+      <a class="disabled">
+        <span class="nav-ic ic-purple"><svg width="15" height="15" viewBox="0 0 20 20" fill="none"><path d="M3 5h14v9H8l-3 3v-3H3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        المساعد الذكي
+        <span class="tag-soon">قريبًا</span>
+      </a>
+    </nav>
+    <div class="side-status" id="sideStatus">
+      <div class="row"><span>حالة السيرفر</span><span><span class="dot"></span>يتحقق…</span></div>
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <a class="brand" href="/">
+        <span class="brand-mark"></span>
+        <span class="brand-name">Scan·25</span>
+      </a>
+      <div class="topbar-right">
+        <span class="topbar-tag">{% block topbar_tag %}Medicinal &amp; toxic plant recognition{% endblock %}</span>
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل المظهر"></button>
+      </div>
+    </header>
+
+    <div class="wrap dash">
+      {% block content %}{% endblock %}
+    </div>
+
+    <nav class="tabbar">
+      <a href="/" class="{{ 'active' if active_page == 'home' else '' }}">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 9l7-6 7 6v8a1 1 0 0 1-1 1h-3v-6H7v6H4a1 1 0 0 1-1-1V9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        الرئيسية
+      </a>
+      <a href="/plants-list" class="{{ 'active' if active_page == 'plants' else '' }}">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 17V9M10 9C10 5.5 7 4 4 4c0 3.5 2 6 6 5zM10 9c0-3.5 3-5 6-5 0 3.5-2 6-6 5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        النباتات
+      </a>
+      <a href="/history" class="{{ 'active' if active_page == 'history' else '' }}">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        السجل
+      </a>
+    </nav>
+  </div>
+</div>
+
+<button class="fab" id="chatFab" aria-label="المساعد الذكي">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5h14v9H8l-3 3v-3H3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+</button>
+<div class="fab-tip" id="fabTip">المساعد الذكي — قريبًا</div>
+
+<script src="/static/app.js"></script>
+<script>
+initTheme();
+wireThemeToggle("themeToggle");
+
+fetch("/health").then(r => r.json()).then(h => {
+  document.getElementById("sideStatus").innerHTML = `
+    <div class="row"><span>حالة السيرفر</span><span><span class="dot"></span>يعمل</span></div>
+    <div class="row"><span>الجهاز</span><span>${h.device}</span></div>
+    <div class="row"><span>الأصناف</span><span>${h.num_classes}</span></div>
+  `;
+}).catch(() => {
+  document.getElementById("sideStatus").innerHTML = `<div class="row"><span>حالة السيرفر</span><span>غير متاح</span></div>`;
+});
+
+const chatFab = document.getElementById("chatFab");
+const fabTip = document.getElementById("fabTip");
+chatFab.addEventListener("click", () => {
+  fabTip.classList.add("show");
+  setTimeout(() => fabTip.classList.remove("show"), 1800);
+});
+</script>
+{% block scripts %}{% endblock %}
+
+</body>
+</html>
